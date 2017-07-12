@@ -1,0 +1,4542 @@
+<xml>
+
+<Main>
+	<Size>
+		<Width>1200</Width>
+		<Height>600</Height>
+	</Size>
+</Main>
+
+<View>
+	<Name>MainTab</Name>
+	<Type>Tab</Type>
+	<Position>
+		<X>10</X>
+		<Y>30</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>1160</Width>
+		<Height>520</Height>
+	</Size>
+	<Child>Players</Child>
+	<Child>Teams</Child>
+	<Child>Coaches</Child>
+	<Child>Depth Charts</Child>
+	<Child>Injuries</Child>
+	<Child>Uniforms</Child>
+	<Child>Stadiums</Child>
+	<Child>Conferences</Child>
+	<Child>Divisions</Child>
+</View>
+
+<View>
+	<Name>Players</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>PLAY</Name>
+	</Source>
+	<Field>First Name</Field>
+	<Field>Last Name</Field>
+	<Field>Team ID</Field>
+	<Field>Jersey #</Field>
+	<Field>Position</Field>
+	<Field>Years</Field>
+	<Field>Overall</Field>
+	<Field>Speed</Field>
+	<Field>Acceleration</Field>
+	<Field>Agility</Field>
+	<Field>Awareness</Field>
+	<Field>Strength</Field>
+	<Field>Stamina</Field>
+	<Field>Jump</Field>
+	<Field>Injury</Field>
+	<Field>Importance</Field>
+	<Field>Carry</Field>
+	<Field>Ball Carrier Vision</Field>
+	<Field>Juke Move</Field>
+	<Field>Trucking</Field>
+	<Field>Break Tackle</Field>
+	<Field>Stiff Arm</Field>
+	<Field>Catch</Field>
+	<Field>Tackle</Field>
+	<Field>Hit Power</Field>
+	<Field>Block Shedding</Field>
+	<Field>Finese Moves</Field>
+	<Field>Power Moves</Field>
+	<Field>Swin Move</Field>
+	<Field>Impact Blocking</Field>
+	<Field>Pass Blocking</Field>
+	<Field>Pass Blocking Strength</Field>
+	<Field>Pass Blocking Footwork</Field>
+	<Field>Run Blocking</Field>
+	<Field>Run Blocking Strength</Field>
+	<Field>Man Coverage</Field>
+	<Field>Zone Coverage</Field>
+	<Field>Kick Accuracy</Field>
+	<Field>Kick Power</Field>
+	<Field>Kick Return</Field>
+	<Field>Throwing Style</Field>
+	<Field>Throw Accuracy</Field>
+	<Field>Throw Power</Field>
+	<Field>Player Tendancy</Field>
+	<Field>Games Played</Field>
+	<Field>Player ID</Field>
+	<Field>Org Player ID</Field>
+	<Field>Height</Field>
+	<Field>Weight</Field>
+	<Field>Arm Definition</Field>
+	<Field>Butt Definition</Field>
+	<Field>Calf Definition</Field>
+	<Field>Foot Definition</Field>
+	<Field>Gut Definition</Field>
+	<Field>Pad Definition</Field>
+	<Field>Shoulder Definition</Field>
+	<Field>Thigh Definition</Field>
+	<Field>Waist Definition</Field>
+	<Field>Arm Size</Field>
+	<Field>Butt Size</Field>
+	<Field>Calf Size</Field>
+	<Field>Foot Size</Field>
+	<Field>Gut Size</Field>
+	<Field>Pad Size</Field>
+	<Field>Shoulder Size</Field>
+	<Field>Thigh Size</Field>
+	<Field>Waist Size</Field>
+	<Field>Tatoo Left</Field>
+	<Field>Tatoo Right</Field>
+	<Field>Left Elbow</Field>
+	<Field>Right Elbow</Field>
+	<Field>Left Wrist</Field>
+	<Field>Right Wrist</Field>
+	<Field>Left Hand</Field>
+	<Field>Right Hand</Field>
+	<Field>Left Thigh</Field>
+	<Field>Right Thigh</Field>
+	<Field>Left Knee</Field>
+	<Field>Right Knee</Field>
+	<Field>Left Ankle</Field>
+	<Field>Right Ankle</Field>
+	<Field>Left Shoe</Field>
+	<Field>Right Shoe</Field>
+	<Field>Handedness</Field>
+	<Field>Face</Field>
+	<Field>Hair Color</Field>
+	<Field>Helmet</Field>
+	<Field>Face Mask</Field>
+	<Field>Eye Paint</Field>
+	<Field>Visor</Field>
+	<Field>Nasal Strip</Field>
+	<Field>Mouthpiece</Field>
+	<Field>Neck Pad</Field>
+	<Field>Jersey Sleeves</Field>
+	<Field>Hand Warmer</Field>
+	<Field>Towel</Field>
+	<Field>PYEA</Field>
+	<Field>PPRC</Field>
+	<Field>PLBB</Field>
+	<Field>PRBB</Field>
+	<Field>PLCB</Field>
+	<Field>PRCB</Field>
+	<Field>PLFB</Field>
+	<Field>PRFB</Field>
+	<Field>RCHD</Field>
+	<Field>PUND</Field>
+	<Field>PHPD</Field>
+	<Field>PRSD</Field>
+	<Field>PPOE</Field>
+	<Field>TRAF</Field>
+	<Field>PPRI</Field>
+	<Field>PBAK</Field>
+	<Field>PFLK</Field>
+	<Field>PLKL</Field>
+	<Field>PLSL</Field>
+	<Field>PLHN</Field>
+	<Field>PRHN</Field>
+	<Field>PLSO</Field>
+	<Field>PTYP</Field>
+	<Field>PSAR</Field>
+	<Field>PLKR</Field>
+	<Field>PLSR</Field>
+	<Field>PRTR</Field>
+	<Field>PDIS</Field>
+	<Field>RELS</Field>
+	<Field>PRNS</Field>
+	<Field>PPRS</Field>
+	<Field>SPCT</Field>
+	<Field>PESV</Field>
+	<Field>PBFW</Field>
+	<Field>PLSY</Field>
+</View>
+<Table>
+	<Abbreviation>PLAY</Abbreviation>
+	<Name>Players</Name>
+</Table>
+<View>
+	<Name>Teams</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>TEAM</Name>
+	</Source>
+	<Field>Team Name</Field>
+	<Field>Team Long Name</Field>
+	<Field>Team Short Name</Field>
+	<Field>Team Nickname</Field>
+	<Field>Prestige</Field>
+	<Field>Team Rival ID</Field>
+	<Field>BCS Ranking</Field>
+	<Field>Team Offensive Playbook</Field>
+	<Field>Team Defensive Playbook</Field>
+	<Field>Team Rating Overall</Field>
+	<Field>Team Rating Offense</Field>
+	<Field>Team Rating Defense</Field>
+	<Field>Team Rating QB</Field>
+	<Field>Team Rating RB</Field>
+	<Field>Team Rating WR</Field>
+	<Field>Team Rating OL</Field>
+	<Field>Team Rating DL</Field>
+	<Field>Team Rating LB</Field>
+	<Field>Team Rating DB</Field>
+	<Field>Team Rating Special Teams</Field>
+	<Field>Conference ID</Field>
+	<Field>Division ID</Field>
+	<Field>Division Place</Field>
+	<Field>League ID</Field>
+	<Field>Stadium ID</Field>
+	<Field>Team Logo</Field>
+	<Field>Team Roster Helmet</Field>
+	<Field>Team Endzone 1</Field>
+	<Field>Team Endzone 2</Field>
+	<Field>All Time Wins</Field>
+	<Field>All Time Ties</Field>
+	<Field>All Time Losses</Field>
+	<Field>Team Prior Season Wins</Field>
+	<Field>Team Prior Season Ties</Field>
+	<Field>Team Prior Season Losses</Field>
+	<Field>Team Type</Field>
+	<Field>Team Roster Order</Field>
+	<Field>Team Official ID</Field>
+	<Field>Team ID</Field>
+	<Field>TMCC</Field>
+	<Field>DSUS</Field>
+	<Field>TSI1</Field>
+	<Field>TSI2</Field>
+	<Field>TMAA</Field>
+	<Field>TMIA</Field>
+	<Field>TMNA</Field>
+	<Field>TLSA</Field>
+	<Field>TB2B</Field>
+	<Field>TBCB</Field>
+	<Field>TFFB</Field>
+	<Field>TFOB</Field>
+	<Field>TOPB</Field>
+	<Field>UDBC</Field>
+	<Field>TEBC</Field>
+	<Field>THMC</Field>
+	<Field>NUMC</Field>
+	<Field>NCID</Field>
+	<Field>MSID</Field>
+	<Field>TSID</Field>
+	<Field>CYID</Field>
+	<Field>TFRD</Field>
+	<Field>TCHE</Field>
+	<Field>TCRE</Field>
+	<Field>TB2G</Field>
+	<Field>TBCG</Field>
+	<Field>TFFG</Field>
+	<Field>TFOG</Field>
+	<Field>TMPI</Field>
+	<Field>TMRK</Field>
+	<Field>CRCL</Field>
+	<Field>TMFL</Field>
+	<Field>TCHL</Field>
+	<Field>CBOL</Field>
+	<Field>TFTL</Field>
+	<Field>TCAM</Field>
+	<Field>TPTM</Field>
+	<Field>NCYN</Field>
+	<Field>TSHO</Field>
+	<Field>TUHO</Field>
+	<Field>TPIO</Field>
+	<Field>TFLO</Field>
+	<Field>INPO</Field>
+	<Field>ATTO</Field>
+	<Field>TAUO</Field>
+	<Field>DCAP</Field>
+	<Field>OCAP</Field>
+	<Field>TMCP</Field>
+	<Field>NCDP</Field>
+	<Field>TCFP</Field>
+	<Field>TCRP</Field>
+	<Field>TGRP</Field>
+	<Field>TB2R</Field>
+	<Field>TMAR</Field>
+	<Field>TBCR</Field>
+	<Field>TTFR</Field>
+	<Field>TFOR</Field>
+	<Field>TDPR</Field>
+	<Field>TDRR</Field>
+	<Field>TORR</Field>
+	<Field>ATTR</Field>
+	<Field>SDUR</Field>
+	<Field>FCYR</Field>
+	<Field>NCYR</Field>
+	<Field>TCHS</Field>
+	<Field>TNHS</Field>
+	<Field>TVIS</Field>
+	<Field>THPS</Field>
+	<Field>TVQS</Field>
+	<Field>TPRS</Field>
+	<Field>CSAT</Field>
+	<Field>SNCT</Field>
+	<Field>CRCT</Field>
+	<Field>TCHT</Field>
+	<Field>CBOT</Field>
+	<Field>TCPT</Field>
+	<Field>TGPT</Field>
+	<Field>PFBV</Field>
+	<Field>PTDV</Field>
+	<Field>PCEV</Field>
+	<Field>PAFV</Field>
+	<Field>PPFV</Field>
+	<Field>PCHV</Field>
+	<Field>PPHV</Field>
+	<Field>PCIV</Field>
+	<Field>PCLV</Field>
+	<Field>TENV</Field>
+	<Field>PAPV</Field>
+	<Field>PCPV</Field>
+	<Field>PEPV</Field>
+	<Field>PHPV</Field>
+	<Field>TMPV</Field>
+	<Field>PPSV</Field>
+	<Field>PGVV</Field>
+	<Field>PTVV</Field>
+	<Field>PPXV</Field>
+	<Field>PCYV</Field>
+	<Field>TUAW</Field>
+	<Field>CRCW</Field>
+	<Field>TCHW</Field>
+	<Field>CBOW</Field>
+	<Field>TSOW</Field>
+	<Field>ATTY</Field>
+	<Field>TAth</Field>
+	<Field>tmpp</Field>
+	<Field>TAss</Field>
+</View>
+<Table>
+	<Abbreviation>TEAM</Abbreviation>
+	<Name>Teams</Name>
+</Table>
+<View>
+	<Name>Coaches</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>COCH</Name>
+	</Source>
+	<Field>Coach's Name</Field>
+	<Field>Coach's First Name</Field>
+	<Field>Coach's Last Name</Field>
+	<Field>Coach's Position</Field>
+	<Field>Team ID</Field>
+	<Field>Coach's Offensive Playbook</Field>
+	<Field>Coach's Defensive Playbook</Field>
+	<Field>Coach's Offensive Aggressiveness</Field>
+	<Field>Coach's Defensive Aggressiveness</Field>
+	<Field>Coach's Offensive Strategy</Field>
+	<Field>Coach's Defensive Strategy</Field>
+	<Field>Coach's Running Strategy</Field>
+	<Field>Coach's Pass Defense Strategy</Field>
+	<Field>Coach's Approval Rating</Field>
+	<Field>Coach's Year</Field>
+	<Field>Contract Length</Field>
+	<Field>Coach's Age</Field>
+	<Field>Coach's Hair</Field>
+	<Field>Coach's Height</Field>
+	<Field>Coach's Skin Color</Field>
+	<Field>Coach's Winning Seasons</Field>
+	<Field>Career Wins</Field>
+	<Field>Career Ties</Field>
+	<Field>Career Losses</Field>
+	<Field>Coach's Last Team</Field>
+	<Field>Manage Depth Chart</Field>
+	<Field>User Controled</Field>
+	<Field>Team Official ID</Field>
+	<Field>Coach ID</Field>
+	<Field>CFFA</Field>
+	<Field>CFLB</Field>
+	<Field>CSPC</Field>
+	<Field>CFRC</Field>
+	<Field>CFSC</Field>
+	<Field>CCTC</Field>
+	<Field>CYCD</Field>
+	<Field>PPID</Field>
+	<Field>PTID</Field>
+	<Field>CFRE</Field>
+	<Field>CCBI</Field>
+	<Field>CFBI</Field>
+	<Field>CHBI</Field>
+	<Field>CLBI</Field>
+	<Field>CQBI</Field>
+	<Field>CSFI</Field>
+	<Field>COLI</Field>
+	<Field>CWRI</Field>
+	<Field>CDTI</Field>
+	<Field>COPK</Field>
+	<Field>ROFL</Field>
+	<Field>CFHL</Field>
+	<Field>CBLL</Field>
+	<Field>CWPL</Field>
+	<Field>PCTL</Field>
+	<Field>COTL</Field>
+	<Field>CDEM</Field>
+	<Field>COPM</Field>
+	<Field>COIN</Field>
+	<Field>PCLN</Field>
+	<Field>CTWN</Field>
+	<Field>CRRP</Field>
+	<Field>COSP</Field>
+	<Field>CSXP</Field>
+	<Field>CFFR</Field>
+	<Field>CTYR</Field>
+	<Field>CSAS</Field>
+	<Field>CLPS</Field>
+	<Field>CDTS</Field>
+	<Field>COTS</Field>
+	<Field>CFBT</Field>
+	<Field>CHBT</Field>
+	<Field>CLBT</Field>
+	<Field>CQBT</Field>
+	<Field>CDET</Field>
+	<Field>CHFT</Field>
+	<Field>CSFT</Field>
+	<Field>COHT</Field>
+	<Field>COLT</Field>
+	<Field>CWRT</Field>
+	<Field>CDST</Field>
+	<Field>COST</Field>
+	<Field>CDTT</Field>
+	<Field>CBLW</Field>
+	<Field>CCTW</Field>
+	<Field>PCTW</Field>
+	<Field>CNTW</Field>
+	<Field>CCBX</Field>
+	<Field>CHTY</Field>
+	<Field>CLTY</Field>
+	<Field>COTY</Field>
+	<Field>CBSZ</Field>
+	<Field>CThg</Field>
+	<Field>CTgw</Field>
+</View>
+<Table>
+	<Abbreviation>COCH</Abbreviation>
+	<Name>Coaches</Name>
+</Table>
+<View>
+	<Name>Depth Charts</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>DCHT</Name>
+	</Source>
+	<Field>Player ID</Field>
+	<Field>Team ID</Field>
+	<Field>Position</Field>
+	<Field>Depth Chart Order</Field>
+</View>
+<Table>
+	<Abbreviation>DCHT</Abbreviation>
+	<Name>Depth Charts</Name>
+</Table>
+<View>
+	<Name>Injuries</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>INJY</Name>
+	</Source>
+	<Field>Player ID</Field>
+	<Field>Team ID</Field>
+	<Field>Injury Type</Field>
+	<Field>Injury Length</Field>
+	<Field>Injury Reserved</Field>
+	<Field>INJR</Field>
+</View>
+<Table>
+	<Abbreviation>INJY</Abbreviation>
+	<Name>Injuries</Name>
+</Table>
+<View>
+	<Name>Uniforms</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>TUNI</Name>
+	</Source>
+	<Field>Uniform ID</Field>
+	<Field>Team ID</Field>
+	<Field>PDAA</Field>
+	<Field>CPAA</Field>
+	<Field>CSAA</Field>
+	<Field>CPBA</Field>
+	<Field>CSBA</Field>
+	<Field>JCCA</Field>
+	<Field>CPCA</Field>
+	<Field>JTCA</Field>
+	<Field>JEEA</Field>
+	<Field>JFEA</Field>
+	<Field>CJEA</Field>
+	<Field>JOEA</Field>
+	<Field>CPEA</Field>
+	<Field>JTEA</Field>
+	<Field>JCFA</Field>
+	<Field>CJFA</Field>
+	<Field>CPFA</Field>
+	<Field>CSHA</Field>
+	<Field>JFLA</Field>
+	<Field>PFLA</Field>
+	<Field>JOLA</Field>
+	<Field>POLA</Field>
+	<Field>JRLA</Field>
+	<Field>PRLA</Field>
+	<Field>JTLA</Field>
+	<Field>PTLA</Field>
+	<Field>JEOA</Field>
+	<Field>JFOA</Field>
+	<Field>CHOA</Field>
+	<Field>CJOA</Field>
+	<Field>JOOA</Field>
+	<Field>CPOA</Field>
+	<Field>JTOA</Field>
+	<Field>JCSA</Field>
+	<Field>JCTA</Field>
+	<Field>JETA</Field>
+	<Field>JFTA</Field>
+	<Field>CHTA</Field>
+	<Field>CJTA</Field>
+	<Field>JOTA</Field>
+	<Field>CPTA</Field>
+	<Field>JTTA</Field>
+	<Field>JCUA</Field>
+	<Field>CPAB</Field>
+	<Field>CPBB</Field>
+	<Field>JCCB</Field>
+	<Field>CPCB</Field>
+	<Field>JTCB</Field>
+	<Field>CPDB</Field>
+	<Field>JEEB</Field>
+	<Field>JFEB</Field>
+	<Field>CJEB</Field>
+	<Field>JOEB</Field>
+	<Field>JTEB</Field>
+	<Field>JCFB</Field>
+	<Field>CJFB</Field>
+	<Field>CSHB</Field>
+	<Field>JFLB</Field>
+	<Field>PFLB</Field>
+	<Field>JOLB</Field>
+	<Field>POLB</Field>
+	<Field>JRLB</Field>
+	<Field>PRLB</Field>
+	<Field>JTLB</Field>
+	<Field>PTLB</Field>
+	<Field>JEOB</Field>
+	<Field>JFOB</Field>
+	<Field>CHOB</Field>
+	<Field>CJOB</Field>
+	<Field>JOOB</Field>
+	<Field>JTOB</Field>
+	<Field>JCSB</Field>
+	<Field>JCTB</Field>
+	<Field>JETB</Field>
+	<Field>JFTB</Field>
+	<Field>CHTB</Field>
+	<Field>CJTB</Field>
+	<Field>JOTB</Field>
+	<Field>JTTB</Field>
+	<Field>JCUB</Field>
+	<Field>CPAC</Field>
+	<Field>CPBC</Field>
+	<Field>JCCC</Field>
+	<Field>CPCC</Field>
+	<Field>JTCC</Field>
+	<Field>CPDC</Field>
+	<Field>JCFC</Field>
+	<Field>JFLC</Field>
+	<Field>PFLC</Field>
+	<Field>JOLC</Field>
+	<Field>POLC</Field>
+	<Field>JRLC</Field>
+	<Field>JTLC</Field>
+	<Field>PTLC</Field>
+	<Field>HONC</Field>
+	<Field>HTNC</Field>
+	<Field>CHOC</Field>
+	<Field>JCSC</Field>
+	<Field>JCTC</Field>
+	<Field>CHTC</Field>
+	<Field>JCUC</Field>
+	<Field>JCCD</Field>
+	<Field>JTCD</Field>
+	<Field>JCFD</Field>
+	<Field>JFLD</Field>
+	<Field>PFLD</Field>
+	<Field>JOLD</Field>
+	<Field>POLD</Field>
+	<Field>JRLD</Field>
+	<Field>PRLD</Field>
+	<Field>JTLD</Field>
+	<Field>PTLD</Field>
+	<Field>JCSD</Field>
+	<Field>JCTD</Field>
+	<Field>JCUD</Field>
+	<Field>JFLE</Field>
+	<Field>JOLE</Field>
+	<Field>JRLE</Field>
+	<Field>JTLE</Field>
+	<Field>CHOE</Field>
+	<Field>CHTE</Field>
+	<Field>JFLF</Field>
+	<Field>JOLF</Field>
+	<Field>JRLF</Field>
+	<Field>JTLF</Field>
+	<Field>JENF</Field>
+	<Field>JFNF</Field>
+	<Field>JONF</Field>
+	<Field>JTNF</Field>
+	<Field>CHOF</Field>
+	<Field>CHTF</Field>
+	<Field>CPCG</Field>
+	<Field>CPDG</Field>
+	<Field>JFLG</Field>
+	<Field>JOLG</Field>
+	<Field>JRLG</Field>
+	<Field>JTLG</Field>
+	<Field>JENG</Field>
+	<Field>JFNG</Field>
+	<Field>JONG</Field>
+	<Field>JTNG</Field>
+	<Field>JFLH</Field>
+	<Field>JOLH</Field>
+	<Field>JRLH</Field>
+	<Field>JTLH</Field>
+	<Field>JFLI</Field>
+	<Field>JOLI</Field>
+	<Field>JRLI</Field>
+	<Field>JTLI</Field>
+	<Field>JFLJ</Field>
+	<Field>JOLJ</Field>
+	<Field>JRLJ</Field>
+	<Field>JTLJ</Field>
+	<Field>JFIL</Field>
+	<Field>JOIL</Field>
+	<Field>JRIL</Field>
+	<Field>JTIL</Field>
+	<Field>JZIL</Field>
+	<Field>CPCN</Field>
+	<Field>CPDN</Field>
+	<Field>JFSN</Field>
+	<Field>JOSN</Field>
+	<Field>JRSN</Field>
+	<Field>JTSN</Field>
+	<Field>TUCO</Field>
+	<Field>JEFO</Field>
+	<Field>JFFO</Field>
+	<Field>JOFO</Field>
+	<Field>JTFO</Field>
+	<Field>HOLO</Field>
+	<Field>HTLO</Field>
+	<Field>JFSO</Field>
+	<Field>CPCP</Field>
+	<Field>CPDP</Field>
+	<Field>JEFP</Field>
+	<Field>JFFP</Field>
+	<Field>JOFP</Field>
+	<Field>JTFP</Field>
+	<Field>JFSP</Field>
+	<Field>CPDQ</Field>
+	<Field>CPDR</Field>
+	<Field>JFFR</Field>
+	<Field>JOFR</Field>
+	<Field>JRFR</Field>
+	<Field>JTFR</Field>
+	<Field>PRLR</Field>
+	<Field>JFNR</Field>
+	<Field>JONR</Field>
+	<Field>JRNR</Field>
+	<Field>JTNR</Field>
+	<Field>CPDS</Field>
+	<Field>JFIS</Field>
+	<Field>JOIS</Field>
+	<Field>JTIS</Field>
+	<Field>CPDT</Field>
+	<Field>JEFT</Field>
+	<Field>JFFT</Field>
+	<Field>JOFT</Field>
+	<Field>JTFT</Field>
+	<Field>HOLT</Field>
+	<Field>HTLT</Field>
+	<Field>JENT</Field>
+	<Field>JFNT</Field>
+	<Field>JONT</Field>
+	<Field>JTNT</Field>
+	<Field>CHOT</Field>
+	<Field>CHTT</Field>
+	<Field>CPDU</Field>
+	<Field>CPDV</Field>
+	<Field>CPDW</Field>
+	<Field>CPDX</Field>
+	<Field>CPDY</Field>
+	<Field>CPDZ</Field>
+</View>
+<Table>
+	<Abbreviation>TUNI</Abbreviation>
+	<Name>Uniforms</Name>
+</Table>
+<View>
+	<Name>Stadiums</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>STAD</Name>
+	</Source>
+	<Field>Stadium Name</Field>
+	<Field>Stadium Team Nickname</Field>
+	<Field>Team Name</Field>
+	<Field>Stadium City</Field>
+	<Field>Stadium Years</Field>
+	<Field>Seating Capacity</Field>
+	<Field>Grass Type</Field>
+	<Field>Roof</Field>
+	<Field>Roof Lights</Field>
+	<Field>Background</Field>
+	<Field>Info Sideline Pattern</Field>
+	<Field>Info Enzone Walls</Field>
+	<Field>Endzone Background</Field>
+	<Field>North Endzone 1st Deck</Field>
+	<Field>North Endzone 2nd Deck</Field>
+	<Field>North Endzone 3rd Deck</Field>
+	<Field>East Sideline 1st Deck</Field>
+	<Field>East Sideline 2nd Deck</Field>
+	<Field>East Sideline 3rd Deck</Field>
+	<Field>West Sideline 1st Deck</Field>
+	<Field>West Sideline 2nd Deck</Field>
+	<Field>West Sideline 3rd Deck</Field>
+	<Field>South Endzone 1st Deck</Field>
+	<Field>South Endzone 2nd Deck</Field>
+	<Field>South Endzone 3rd Deck</Field>
+	<Field>1st Deck Northwest Corner</Field>
+	<Field>1st Deck Northeast Corner</Field>
+	<Field>1st Deck Southwest Corner</Field>
+	<Field>1st Deck Southeat Corner</Field>
+	<Field>Lower Level</Field>
+	<Field>Mid Level</Field>
+	<Field>Upper Level</Field>
+	<Field>Upper Endzone</Field>
+	<Field>Club Seats</Field>
+	<Field>Luxury Box</Field>
+	<Field>Stadium ID</Field>
+	<Field>STS1</Field>
+	<Field>SP22</Field>
+	<Field>STS2</Field>
+	<Field>SP23</Field>
+	<Field>SP18</Field>
+	<Field>STAA</Field>
+	<Field>STCA</Field>
+	<Field>STFA</Field>
+	<Field>TMNA</Field>
+	<Field>EZTA</Field>
+	<Field>SFBB</Field>
+	<Field>SUGB</Field>
+	<Field>EZTB</Field>
+	<Field>WCLC</Field>
+	<Field>EZTC</Field>
+	<Field>FLID</Field>
+	<Field>SUID</Field>
+	<Field>CYID</Field>
+	<Field>SORD</Field>
+	<Field>SCRE</Field>
+	<Field>SFWE</Field>
+	<Field>STOF</Field>
+	<Field>EZBG</Field>
+	<Field>MPTH</Field>
+	<Field>SORI</Field>
+	<Field>SFTI</Field>
+	<Field>SFBM</Field>
+	<Field>STFN</Field>
+	<Field>STGN</Field>
+	<Field>SLON</Field>
+	<Field>SWFP</Field>
+	<Field>SWRP</Field>
+	<Field>SFSP</Field>
+	<Field>SWSP</Field>
+	<Field>SWWP</Field>
+	<Field>STYP</Field>
+	<Field>STDR</Field>
+	<Field>STPR</Field>
+	<Field>SFBS</Field>
+	<Field>SRES</Field>
+	<Field>SMFS</Field>
+	<Field>STHS</Field>
+	<Field>SLAT</Field>
+	<Field>SRAT</Field>
+	<Field>STAT</Field>
+	<Field>SFFT</Field>
+	<Field>SGNT</Field>
+	<Field>SIOT</Field>
+	<Field>SGPT</Field>
+	<Field>SGRT</Field>
+	<Field>STRT</Field>
+	<Field>SBST</Field>
+	<Field>EZTT</Field>
+	<Field>SFUT</Field>
+	<Field>SMLX</Field>
+	<Field>SMLY</Field>
+	<Field>STRY</Field>
+	<Field>SFTY</Field>
+	<Field>SKTY</Field>
+	<Field>SFbb</Field>
+	<Field>STfc</Field>
+	<Field>STlc</Field>
+	<Field>Stlc</Field>
+	<Field>SUTf</Field>
+	<Field>STrf</Field>
+	<Field>STgg</Field>
+	<Field>STri</Field>
+	<Field>STcl</Field>
+	<Field>STll</Field>
+	<Field>STrl</Field>
+	<Field>STwp</Field>
+	<Field>STRr</Field>
+	<Field>stcr</Field>
+	<Field>STlr</Field>
+	<Field>STrr</Field>
+	<Field>STts</Field>
+	<Field>SSft</Field>
+	<Field>STjt</Field>
+	<Field>STxt</Field>
+	<Field>STtv</Field>
+	<Field>STfw</Field>
+</View>
+<Table>
+	<Abbreviation>STAD</Abbreviation>
+	<Name>Stadiums</Name>
+</Table>
+<View>
+	<Name>Conferences</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>CONF</Name>
+	</Source>
+	<Field>Conference Name</Field>
+	<Field>League ID</Field>
+	<Field>Conference ID</Field>
+	<Field>CMNP</Field>
+	<Field>CMXP</Field>
+	<Field>CNPR</Field>
+	<Field>CPRS</Field>
+	<Field>PCPV</Field>
+	<Field>NCcl</Field>
+</View>
+<Table>
+	<Abbreviation>CONF</Abbreviation>
+	<Name>Conferences</Name>
+</Table>
+<View>
+	<Name>Divisions</Name>
+	<Type>Grid</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>200</Width>
+		<Height>100</Height>
+	</Size>
+	<Source>
+		<Type>Table</Type>
+		<Name>DIVI</Name>
+	</Source>
+	<Field>Division Name</Field>
+	<Field>Division Short Name</Field>
+	<Field>Conference ID</Field>
+	<Field>Division ID</Field>
+</View>
+<Table>
+	<Abbreviation>DIVI</Abbreviation>
+	<Name>Divisions</Name>
+</Table>
+
+
+<Field>
+	<Abbreviation>CFFA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLNA</Abbreviation>
+	<Name>Coach's Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDTA</Abbreviation>
+	<Name>Coach's Defensive Aggressiveness</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COTA</Abbreviation>
+	<Name>Coach's Offensive Aggressiveness</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSPC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFRC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFSC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCTC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFUC</Abbreviation>
+	<Name>User Controled</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CYCD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCID</Abbreviation>
+	<Name>Coach ID</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDID</Abbreviation>
+	<Name>Coach's Defensive Playbook</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TGID</Abbreviation>
+	<Name>Team ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlLink>
+		<Table>Teams</Table>
+		<IndexField>Team ID</IndexField>
+		<ReferenceField>Team Name</ReferenceField>
+	</ControlLink>
+</Field>
+<Field>
+	<Abbreviation>TOID</Abbreviation>
+	<Name>Team Official ID</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPID</Abbreviation>
+	<Name>Coach's Offensive Playbook</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CAGE</Abbreviation>
+	<Name>Coach's Age</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFRE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLTF</Abbreviation>
+	<Name>Coach's Last Team</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCBI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFBI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHBI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLBI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CQBI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSFI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSKI</Abbreviation>
+	<Name>Coach's Skin Color</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COLI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CWRI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCTI</Abbreviation>
+	<Name>Career Ties</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDTI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCWI</Abbreviation>
+	<Name>Career Wins</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COPK</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>ROFL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFHL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CBLL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CWPL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCTL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COTL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDEM</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFNM</Abbreviation>
+	<Name>Coach's First Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLNM</Abbreviation>
+	<Name>Coach's Last Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COPM</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COIN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCLN</Abbreviation>
+	<Name>Contract Length</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCLN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CTWN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCLO</Abbreviation>
+	<Name>Career Losses</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CRRP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COSP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSXP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHAR</Abbreviation>
+	<Name>Coach's Hair</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFFR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFRR</Abbreviation>
+	<Name>Manage Depth Chart</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDTR</Abbreviation>
+	<Name>Coach's Pass Defense Strategy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COTR</Abbreviation>
+	<Name>Coach's Offensive Strategy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCYR</Abbreviation>
+	<Name>Coach's Year</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CTYR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSAS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLPS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COPS</Abbreviation>
+	<Name>Coach's Position</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDTS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COTS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCWS</Abbreviation>
+	<Name>Coach's Winning Seasons</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CRAT</Abbreviation>
+	<Name>Coach's Approval Rating</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CFBT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHBT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLBT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CQBT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CRBT</Abbreviation>
+	<Name>Coach's Running Strategy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDET</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHGT</Abbreviation>
+	<Name>Coach's Height</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COHT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COLT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CWRT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDST</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COST</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDTT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CBLW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCTW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCTW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CNTW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CCBX</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CDTY</Abbreviation>
+	<Name>Coach's Defensive Strategy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CLTY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>COTY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CBSZ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CThg</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CTgw</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CGID</Abbreviation>
+	<Name>Conference ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlLink>
+		<Table>Conferences</Table>
+		<IndexField>Conference ID</IndexField>
+		<ReferenceField>Conference Name</ReferenceField>
+	</ControlLink>
+</Field>
+<Field>
+	<Abbreviation>LGID</Abbreviation>
+	<Name>League ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlItem>(0) FBS</ControlItem>
+	<ControlItem>(1) FCS</ControlItem>
+	<ControlItem>(2) Historic</ControlItem>
+	<ControlItem>(3) Fantasy</ControlItem>
+	<ControlItem>(4) High School</ControlItem>
+</Field>
+<Field>
+	<Abbreviation>CNAM</Abbreviation>
+	<Name>Conference Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CMNP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CMXP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CNPR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPRS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCPV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>NCcl</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PGID</Abbreviation>
+	<Name>Player ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlLink>
+		<Table>Players</Table>
+		<IndexField>Player ID</IndexField>
+		<ReferenceField>First Name</ReferenceField>
+		<ReferenceField2>Last Name</ReferenceField2>
+	</ControlLink>
+</Field>
+<Field>
+	<Abbreviation>PPOS</Abbreviation>
+	<Name>Position</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlItem>(0) QB</ControlItem>
+	<ControlItem>(1) HB</ControlItem>
+	<ControlItem>(2) FB</ControlItem>
+	<ControlItem>(3) WR</ControlItem>
+	<ControlItem>(4) TE</ControlItem>
+	<ControlItem>(5) LT</ControlItem>
+	<ControlItem>(6) LG</ControlItem>
+	<ControlItem>(7) C</ControlItem>
+	<ControlItem>(8) RG</ControlItem>
+	<ControlItem>(9) RT</ControlItem>
+	<ControlItem>(10) LE</ControlItem>
+	<ControlItem>(11) RE</ControlItem>
+	<ControlItem>(12) DT</ControlItem>
+	<ControlItem>(13) LLB</ControlItem>
+	<ControlItem>(14) MLB</ControlItem>
+	<ControlItem>(15) RLB</ControlItem>
+	<ControlItem>(16) CB</ControlItem>
+	<ControlItem>(17) SS</ControlItem>
+	<ControlItem>(18) FS</ControlItem>
+	<ControlItem>(19) K</ControlItem>
+	<ControlItem>(20) P</ControlItem>
+	<ControlItem>(21) KR</ControlItem>
+	<ControlItem>(22) PR</ControlItem>
+	<ControlItem>(23) KO</ControlItem>
+	<ControlItem>(24) LS</ControlItem>
+	<ControlItem>(25) 3rd</ControlItem>
+</Field>
+<Field>
+	<Abbreviation>ddep</Abbreviation>
+	<Name>Depth Chart Order</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>DGID</Abbreviation>
+	<Name>Division ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlLink>
+		<Table>Divisions</Table>
+		<IndexField>Division ID</IndexField>
+		<ReferenceField>Division Name</ReferenceField>
+	</ControlLink>
+</Field>
+<Field>
+	<Abbreviation>DNAM</Abbreviation>
+	<Name>Division Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SDNM</Abbreviation>
+	<Name>Division Short Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>INJL</Abbreviation>
+	<Name>Injury Length</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>INIR</Abbreviation>
+	<Name>Injury Reserved</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>INJR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>INJT</Abbreviation>
+	<Name>Injury Type</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSAA</Abbreviation>
+	<Name>Arm Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSBA</Abbreviation>
+	<Name>Butt Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSCA</Abbreviation>
+	<Name>Calf Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PYEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSFA</Abbreviation>
+	<Name>Foot Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSGA</Abbreviation>
+	<Name>Gut Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLHA</Abbreviation>
+	<Name>Left Hand</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRHA</Abbreviation>
+	<Name>Right Hand</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTHA</Abbreviation>
+	<Name>Throw Accuracy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFNA</Abbreviation>
+	<Name>First Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLNA</Abbreviation>
+	<Name>Last Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSPA</Abbreviation>
+	<Name>Pad Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSSA</Abbreviation>
+	<Name>Shoulder Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSTA</Abbreviation>
+	<Name>Thigh Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSTA</Abbreviation>
+	<Name>Stamina</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSWA</Abbreviation>
+	<Name>Waist Definition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLBB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRBB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLCB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRCB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLFB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRFB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PKAC</Abbreviation>
+	<Name>Kick Accuracy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PACC</Abbreviation>
+	<Name>Acceleration</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PMPC</Abbreviation>
+	<Name>Mouthpiece</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPRC</Abbreviation>
+	<Name>Play Recognition</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>RCHD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>POID</Abbreviation>
+	<Name>Org Player ID</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PUND</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHPD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSPD</Abbreviation>
+	<Name>Speed</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRSD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PGHE</Abbreviation>
+	<Name>Face</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPOE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PBRE</Abbreviation>
+	<Name>Nasal Strip</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PEYE</Abbreviation>
+	<Name>Eye Paint</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRAF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPBF</Abbreviation>
+	<Name>Pass Blocking Footwork</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PBSH</Abbreviation>
+	<Name>Block Shedding</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLSH</Abbreviation>
+	<Name>Left Shoe</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRSH</Abbreviation>
+	<Name>Right Shoe</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCTH</Abbreviation>
+	<Name>Catch</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLTH</Abbreviation>
+	<Name>Left Thigh</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRTH</Abbreviation>
+	<Name>Right Thigh</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PAGI</Abbreviation>
+	<Name>Agility</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPRI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PINJ</Abbreviation>
+	<Name>Injury</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PBAK</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTAK</Abbreviation>
+	<Name>Tackle</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPBK</Abbreviation>
+	<Name>Pass Blocking</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRBK</Abbreviation>
+	<Name>Run Blocking</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PNEK</Abbreviation>
+	<Name>Neck Pad</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFLK</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFMK</Abbreviation>
+	<Name>Face Mask</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTRK</Abbreviation>
+	<Name>Trucking</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PBTK</Abbreviation>
+	<Name>Break Tackle</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTAL</Abbreviation>
+	<Name>Tatoo Left</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PIBL</Abbreviation>
+	<Name>Impact Blocking</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHCL</Abbreviation>
+	<Name>Hair Color</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLEL</Abbreviation>
+	<Name>Left Elbow</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PREL</Abbreviation>
+	<Name>Right Elbow</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLKL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSPL</Abbreviation>
+	<Name>Left Ankle</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLSL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHLM</Abbreviation>
+	<Name>Helmet</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSTM</Abbreviation>
+	<Name>Stiff Arm</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHAN</Abbreviation>
+	<Name>Handedness</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PJEN</Abbreviation>
+	<Name>Jersey #</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTEN</Abbreviation>
+	<Name>Player Tendancy</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLHN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRHN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLKN</Abbreviation>
+	<Name>Left Knee</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRKN</Abbreviation>
+	<Name>Right Knee</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLSO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTHP</Abbreviation>
+	<Name>Throw Power</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PIMP</Abbreviation>
+	<Name>Importance</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PJMP</Abbreviation>
+	<Name>Jump</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTYP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCAR</Abbreviation>
+	<Name>Carry</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSAR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTAR</Abbreviation>
+	<Name>Tatoo Right</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PJER</Abbreviation>
+	<Name>Jersey Sleeves</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLKR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PKPR</Abbreviation>
+	<Name>Kick Power</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSPR</Abbreviation>
+	<Name>Right Ankle</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLSR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRTR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSTR</Abbreviation>
+	<Name>Strength</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>POVR</Abbreviation>
+	<Name>Overall</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PAWR</Abbreviation>
+	<Name>Awareness</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLWR</Abbreviation>
+	<Name>Left Wrist</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRWR</Abbreviation>
+	<Name>Right Wrist</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPBS</Abbreviation>
+	<Name>Pass Blocking Strength</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRBS</Abbreviation>
+	<Name>Run Blocking Strength</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PDIS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PVIS</Abbreviation>
+	<Name>Visor</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>RELS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRNS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPRS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PYRS</Abbreviation>
+	<Name>Years</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSAT</Abbreviation>
+	<Name>Arm Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSBT</Abbreviation>
+	<Name>Butt Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SPCT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSCT</Abbreviation>
+	<Name>Calf Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSFT</Abbreviation>
+	<Name>Foot Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHGT</Abbreviation>
+	<Name>Height</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSGT</Abbreviation>
+	<Name>Gut Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PWGT</Abbreviation>
+	<Name>Weight</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHIT</Abbreviation>
+	<Name>Hit Power</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSPT</Abbreviation>
+	<Name>Pad Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PKRT</Abbreviation>
+	<Name>Kick Return</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSST</Abbreviation>
+	<Name>Shoulder Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSTT</Abbreviation>
+	<Name>Thigh Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>BSWT</Abbreviation>
+	<Name>Waist Size</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PBCV</Abbreviation>
+	<Name>Ball Carrier Vision</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PMCV</Abbreviation>
+	<Name>Man Coverage</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PZCV</Abbreviation>
+	<Name>Zone Coverage</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFMV</Abbreviation>
+	<Name>Finese Moves</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PJMV</Abbreviation>
+	<Name>Juke Move</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPMV</Abbreviation>
+	<Name>Power Moves</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSMV</Abbreviation>
+	<Name>Swin Move</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PESV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PBFW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLHW</Abbreviation>
+	<Name>Hand Warmer</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLTW</Abbreviation>
+	<Name>Towel</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PLSY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PSTY</Abbreviation>
+	<Name>Throwing Style</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>sgmp</Abbreviation>
+	<Name>Games Played</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP00</Abbreviation>
+	<Name>North Endzone 1st Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP10</Abbreviation>
+	<Name>East Sideline 1st Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP20</Abbreviation>
+	<Name>Info Sideline Pattern</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP01</Abbreviation>
+	<Name>North Endzone 2nd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP11</Abbreviation>
+	<Name>East Sideline 2nd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP21</Abbreviation>
+	<Name>Grass Type</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STS1</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP02</Abbreviation>
+	<Name>North Endzone 3rd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP12</Abbreviation>
+	<Name>East Sideline 3rd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP22</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STS2</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP03</Abbreviation>
+	<Name>1st Deck Northwest Corner</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP13</Abbreviation>
+	<Name>West Sideline 1st Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP23</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP04</Abbreviation>
+	<Name>1st Deck Northeast Corner</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP14</Abbreviation>
+	<Name>West Sideline 2nd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP24</Abbreviation>
+	<Name>Endzone Background</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP05</Abbreviation>
+	<Name>South Endzone 1st Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP15</Abbreviation>
+	<Name>West Sideline 3rd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP25</Abbreviation>
+	<Name>Background</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP06</Abbreviation>
+	<Name>South Endzone 2nd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP16</Abbreviation>
+	<Name>Roof Lights</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP07</Abbreviation>
+	<Name>South Endzone 3rd Deck</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP17</Abbreviation>
+	<Name>Roof</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP08</Abbreviation>
+	<Name>1st Deck Southwest Corner</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP18</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP09</Abbreviation>
+	<Name>1st Deck Southeat Corner</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SP19</Abbreviation>
+	<Name>Info Enzone Walls</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STAA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STCA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STFA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TDNA</Abbreviation>
+	<Name>Team Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMNA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>EZTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFBB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SUGB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCLB</Abbreviation>
+	<Name>Luxury Box</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>EZTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>WCLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>EZTC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SGID</Abbreviation>
+	<Name>Stadium ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlLink>
+		<Table>Stadiums</Table>
+		<IndexField>Stadium ID</IndexField>
+		<ReferenceField>Stadium Name</ReferenceField>
+	</ControlLink>
+</Field>
+<Field>
+	<Abbreviation>FLID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SUID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CYID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SORD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCRE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCUE</Abbreviation>
+	<Name>Upper Endzone</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFWE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STOF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>EZBG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>MPTH</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SORI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFTI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCLL</Abbreviation>
+	<Name>Lower Level</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCML</Abbreviation>
+	<Name>Mid Level</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCUL</Abbreviation>
+	<Name>Upper Level</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SNAM</Abbreviation>
+	<Name>Stadium Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFBM</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STFN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STGN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STNN</Abbreviation>
+	<Name>Stadium Team Nickname</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SLON</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SYRO</Abbreviation>
+	<Name>Stadium Years</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCAP</Abbreviation>
+	<Name>Seating Capacity</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SWFP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SWRP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFSP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SWSP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SWWP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STYP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STDR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STPR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFBS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCCS</Abbreviation>
+	<Name>Club Seats</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SRES</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SMFS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STHS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SLAT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SRAT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STAT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SCIT</Abbreviation>
+	<Name>Stadium City</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SGNT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SIOT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SGPT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SGRT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STRT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SBST</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>EZTT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFUT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SMLX</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SMLY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STRY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFTY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SKTY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SFbb</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STfc</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STlc</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>Stlc</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SUTf</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STrf</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STgg</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STri</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STcl</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STll</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STrl</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STwp</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STRr</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>stcr</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STlr</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STrr</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STts</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SSft</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STjt</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STxt</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STtv</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>STfw</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PDAA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPAA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSAA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPBA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSBA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCCA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPCA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTCA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTEA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCFA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJFA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPFA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSHA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>POLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTLA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTOA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCSA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JETA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTTA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCUA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPAB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPBB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCCB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPCB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTCB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEEB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFEB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJEB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOEB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTEB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCFB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJFB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSHB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>POLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTLB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCSB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JETB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CJTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTTB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCUB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPAC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPBC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCCC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPCC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTCC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCFC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>POLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTLC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>HONC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>HTNC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHOC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCSC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCTC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCUC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCCD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTCD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCFD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>UFID</Abbreviation>
+	<Name>Uniform ID</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>POLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTLD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCSD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCTD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JCUD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHOE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JENF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFNF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JONF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTNF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHOF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTF</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPCG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JENG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFNG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JONG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTNG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLH</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLH</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLH</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLH</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFLJ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOLJ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRLJ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTLJ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFIL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOIL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRIL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTIL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JZIL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPCN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFSN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOSN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRSN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTSN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TUCO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEFO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFFO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOFO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTFO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>HOLO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>HTLO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFSO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPCP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEFP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFFP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOFP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTFP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFSP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDQ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFFR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOFR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRFR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTFR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PRLR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFNR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JONR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JRNR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTNR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFIS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOIS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTIS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JEFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JOFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTFT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>HOLT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>HTLT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JENT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JFNT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JONT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>JTNT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHOT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CHTT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDU</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDX</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CPDZ</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TSI1</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TEZ1</Abbreviation>
+	<Name>Team Endzone 1</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TSI2</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TEZ2</Abbreviation>
+	<Name>Team Endzone 2</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMAA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMIA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TLNA</Abbreviation>
+	<Name>Team Long Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TSNA</Abbreviation>
+	<Name>Team Short Name</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TLSA</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TB2B</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TBCB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRDB</Abbreviation>
+	<Name>Team Rating DB</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFFB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRLB</Abbreviation>
+	<Name>Team Rating LB</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFOB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TDPB</Abbreviation>
+	<Name>Team Defensive Playbook</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TOPB</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRQB</Abbreviation>
+	<Name>Team Rating QB</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRRB</Abbreviation>
+	<Name>Team Rating RB</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>UDBC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TEBC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMCC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>THMC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>NUMC</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMNC</Abbreviation>
+	<Name>Team Nickname</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>NCID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>MSID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TSID</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFRD</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TORD</Abbreviation>
+	<Name>Team Roster Order</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRDE</Abbreviation>
+	<Name>Team Rating Defense</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCHE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCRE</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TROF</Abbreviation>
+	<Name>Team Rating Offense</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TB2G</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TBCG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFFG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFOG</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMPI</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCTI</Abbreviation>
+	<Name>All Time Ties</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCWI</Abbreviation>
+	<Name>All Time Wins</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCRK</Abbreviation>
+	<Name>BCS Ranking</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMRK</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CRCL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRDL</Abbreviation>
+	<Name>Team Rating DL</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMFL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TLGL</Abbreviation>
+	<Name>Team Logo</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCHL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CBOL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TROL</Abbreviation>
+	<Name>Team Rating OL</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPSL</Abbreviation>
+	<Name>Team Prior Season Losses</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFTL</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCAM</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPTM</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>DISN</Abbreviation>
+	<Name>Division Place</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>NCYN</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TSHO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TUHO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPIO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCLO</Abbreviation>
+	<Name>All Time Losses</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFLO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>INPO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>ATTO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TAUO</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>DCAP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>OCAP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMCP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>NCDP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCFP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCRP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TGRP</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TTYP</Abbreviation>
+	<Name>Team Type</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TB2R</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMAR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TBCR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TTFR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TFOR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TDPR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TOPR</Abbreviation>
+	<Name>Team Offensive Playbook</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TDRR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TORR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TWRR</Abbreviation>
+	<Name>Team Rating WR</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>ATTR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SDUR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>FCYR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>NCYR</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TLGS</Abbreviation>
+	<Name>Team Roster Helmet</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCHS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TNHS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TVIS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>THPS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TVQS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPRS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>DSUS</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CSAT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>SNCT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CRCT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCHT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CBOT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCPT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TGPT</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPST</Abbreviation>
+	<Name>Team Prior Season Ties</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRST</Abbreviation>
+	<Name>Team Rating Special Teams</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PFBV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTDV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCEV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PAFV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPFV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCHV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPHV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCIV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TRIV</Abbreviation>
+	<Name>Team Rival ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlLink>
+		<Table>Teams</Table>
+		<IndexField>Team ID</IndexField>
+		<ReferenceField>Team Name</ReferenceField>
+	</ControlLink>
+</Field>
+<Field>
+	<Abbreviation>PCLV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TENV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TROV</Abbreviation>
+	<Name>Team Rating Overall</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PAPV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PEPV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PHPV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TMPV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPSV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PGVV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PTVV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PPXV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>PCYV</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TUAW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CRCW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TCHW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>CBOW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TSOW</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPSW</Abbreviation>
+	<Name>Team Prior Season Wins</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TPRX</Abbreviation>
+	<Name>Prestige</Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>ATTY</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TAth</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>tmpp</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+<Field>
+	<Abbreviation>TAss</Abbreviation>
+	<Name></Name>
+	<ControlType>TextBox</ControlType>
+</Field>
+
+
+</xml>

@@ -1,0 +1,14 @@
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Release\EA DB Editor.exe
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Release\EA DB Editor.pdb
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Release\MC02Handler.dll
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Release\EAChecksum.dll
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA_DB_Editor.Form1.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA_DB_Editor.Properties.Resources.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA DB Editor.exe
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA DB Editor.pdb
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA_DB_Editor.FilterForm.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA DB Editor.csprojResolveAssemblyReference.cache
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA DB Editor.csproj.GenerateResource.Cache
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA_DB_Editor.GenericList.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA_DB_Editor.ChooseField.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Release\EA_DB_Editor.ConfigCopySelection.resources

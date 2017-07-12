@@ -1,0 +1,26 @@
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Debug\EA DB Editor.exe
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Debug\EA DB Editor.pdb
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Debug\MC02Handler.dll
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\bin\Debug\EAChecksum.dll
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.Form1.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.Properties.Resources.resources
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.exe
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.pdb
+F:\Code\Madden12RosterReader\EA DB Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.FilterForm.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.exe
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.pdb
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\bin\Debug\EA DB Editor.exe
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\bin\Debug\EA DB Editor.pdb
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\bin\Debug\MC02Handler.dll
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\bin\Debug\EAChecksum.dll
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.csprojResolveAssemblyReference.cache
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.ChooseField.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.ConfigCopySelection.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.FilterForm.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.Form1.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.GenericList.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.Properties.Resources.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.csproj.GenerateResource.Cache

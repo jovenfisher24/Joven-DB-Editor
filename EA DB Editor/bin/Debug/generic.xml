@@ -1,0 +1,53 @@
+<xml>
+
+<Main>
+	<Size>
+		<Width>1200</Width>
+		<Height>600</Height>
+	</Size>
+</Main>
+
+<FieldCount>1</FieldCount>
+<Field>
+	<Abbreviation>PGID</Abbreviation>
+	<Name>Player ID</Name>
+	<ControlType>ComboBox</ControlType>
+	<ControlItemCount>1</ControlItemCount>
+	<ControlItem>TextBox</ControlItem>
+	<ControlLocked>
+	<ControlLink>
+		<Table>
+		<IndexField>
+		<ReferenceField>
+		<ReferenceField2>Last Name</ReferenceField2>
+	</ControlLink>
+</Field>
+
+<TableCount>1</TableCount>
+<Table>
+	<Abbreviation>PLAY</Abbreviation>
+	<Name>Players</Name>
+</Table>
+
+<View>
+	<Name>MainList</Name>
+	<Type>Grid,List Item,Tab</Type>
+	<Position>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</Position>
+	<Size>
+		<Width>100</Width>
+		<Height>50</Height>
+	</Size>
+	<ChildCount>1</ChildCount>
+	<Child>ChildList</Child>
+	<Source>
+		<Type>Table,SelectedItem</Type>
+		<Name>table name,view name</Name>
+	</Source>
+	<FieldCount>0</FieldCount>
+	<Field>None</Field>
+</View>
+</xml>
