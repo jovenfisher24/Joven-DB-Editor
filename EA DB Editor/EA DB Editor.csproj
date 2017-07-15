@@ -67,6 +67,12 @@
     <Compile Include="ConfigCopySelection.Designer.cs">
       <DependentUpon>ConfigCopySelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilterAdjustForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterAdjustForm.Designer.cs">
+      <DependentUpon>FilterAdjustForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigCopySelection.resx">
       <DependentUpon>ConfigCopySelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterAdjustForm.resx">
+      <DependentUpon>FilterAdjustForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FilterForm.resx">
       <DependentUpon>FilterForm.cs</DependentUpon>

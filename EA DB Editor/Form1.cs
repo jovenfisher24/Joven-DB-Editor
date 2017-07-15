@@ -609,7 +609,7 @@ namespace EA_DB_Editor
 		}
 		private void massToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FilterForm	ff	= new FilterForm( lMappedFields, lMappedTables, lMappedViews, FilterForm.CBToUse.mass, "Mass Operations" );
+			FilterForm	ff	= new FilterForm( lMappedFields, lMappedTables, new List<View>() { currentView }, FilterForm.CBToUse.mass, "Mass Operations" );
 			ff.ShowDialog( );
 
 			foreach( ListViewItem lvi in ((ListView) ff.view.DisplayControl).Items )
@@ -1224,9 +1224,28 @@ namespace EA_DB_Editor
 			currentView.RefreshGridData( maddenDB[ mt.Abbreviation ] );
 			Cursor.Current	= Cursors.Default;
 		}
-	}
 
-	public class BitStream
+        private void filterAdjustToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, lMappedTables, new List<View>() { currentView }, "Filter Adjustment");
+            fa.ShowDialog();
+
+            //foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+            //{
+            //    Console.WriteLine(lvi);
+            //    foreach (FieldFilter adjust in fa.lFilters)
+            //    {
+            //        Console.WriteLine(adjust);
+            //        adjust.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+            //    }
+            //}
+
+            MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
+            fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+        }
+    }
+
+    public class BitStream
 	{	public	byte[]		buffer;
 		public	BitArray	bitarray;
 		public	long		bitsused;
