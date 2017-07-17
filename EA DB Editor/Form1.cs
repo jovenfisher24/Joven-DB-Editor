@@ -1241,7 +1241,7 @@ namespace EA_DB_Editor
             //}
 
             MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
-            fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+            fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
         }
     }
 
