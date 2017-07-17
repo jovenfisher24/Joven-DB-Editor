@@ -16,6 +16,7 @@ namespace EA_DB_Editor
         public List<View> lMappedViews = new List<View>();
         public View view = null;
         public List<FieldFilter> lFilters = new List<FieldFilter>();
+        public List<FieldFilter> aFilters = new List<FieldFilter>();
         public string text = "";
 
 
@@ -48,6 +49,11 @@ namespace EA_DB_Editor
             foreach (ListViewItem lvi in lvFitlers.Items)
             {
                 lFilters.Add(new FieldFilter(lvi.SubItems[0].Text, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
+            }
+
+            foreach (ListViewItem lvi in lvAdjust.Items)
+            {
+                aFilters.Add(new FieldFilter(lvi.SubItems[0].Text, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
             }
         }
 

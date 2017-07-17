@@ -1230,18 +1230,16 @@ namespace EA_DB_Editor
             FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, lMappedTables, new List<View>() { currentView }, "Filter Adjustment");
             fa.ShowDialog();
 
-            //foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
-            //{
-            //    Console.WriteLine(lvi);
-            //    foreach (FieldFilter adjust in fa.lFilters)
-            //    {
-            //        Console.WriteLine(adjust);
-            //        adjust.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
-            //    }
-            //}
-
             MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
             fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
+
+            foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+            {
+                foreach (FieldFilter mass in fa.aFilters)
+                    mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+            }
+
+            fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
         }
     }
 
