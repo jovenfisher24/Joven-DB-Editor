@@ -601,7 +601,7 @@ namespace EA_DB_Editor
 		}
 		private void filterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FilterForm	ff	= new FilterForm( lMappedFields, lMappedTables, new List<View>( ){ currentView }, FilterForm.CBToUse.filter, "Filters" );
+			FilterForm	ff	= new FilterForm( lMappedFields, lMappedTables, new List<View>() { currentView }, FilterForm.CBToUse.filter, "Filters" );
 			ff.ShowDialog( );
 
 			MaddenTable	mt	= MaddenTable.FindTable( lMappedTables, ff.view.SourceName );

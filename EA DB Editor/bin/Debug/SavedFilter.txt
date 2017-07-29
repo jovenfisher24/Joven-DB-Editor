@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SavedCriteria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>test</Name>
+  <Description>This is a test</Description>
+  <listFilters>
+    <FieldFilter>
+      <field>TGID</field>
+      <value>6</value>
+      <op>Equal</op>
+    </FieldFilter>
+  </listFilters>
+  <adjustFilters />
+  <table>TEAM</table>
+</SavedCriteria>

@@ -46,6 +46,10 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbTable
@@ -53,9 +57,9 @@
             this.cbTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbTable.FormattingEnabled = true;
-            this.cbTable.Location = new System.Drawing.Point(12, 10);
+            this.cbTable.Location = new System.Drawing.Point(55, 12);
             this.cbTable.Name = "cbTable";
-            this.cbTable.Size = new System.Drawing.Size(457, 21);
+            this.cbTable.Size = new System.Drawing.Size(414, 21);
             this.cbTable.TabIndex = 0;
             this.cbTable.SelectedIndexChanged += new System.EventHandler(this.cbTable_SelectedIndexChanged);
             // 
@@ -63,7 +67,7 @@
             // 
             this.RemoveFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveFilter.Location = new System.Drawing.Point(306, 155);
+            this.RemoveFilter.Location = new System.Drawing.Point(306, 170);
             this.RemoveFilter.Name = "RemoveFilter";
             this.RemoveFilter.Size = new System.Drawing.Size(163, 23);
             this.RemoveFilter.TabIndex = 2;
@@ -74,7 +78,7 @@
             // cbField
             // 
             this.cbField.FormattingEnabled = true;
-            this.cbField.Location = new System.Drawing.Point(-8, 101);
+            this.cbField.Location = new System.Drawing.Point(-8, 103);
             this.cbField.Name = "cbField";
             this.cbField.Size = new System.Drawing.Size(121, 21);
             this.cbField.TabIndex = 3;
@@ -92,7 +96,7 @@
             "!contains",
             "endswith",
             "startswith"});
-            this.cbOp.Location = new System.Drawing.Point(-8, 128);
+            this.cbOp.Location = new System.Drawing.Point(-8, 130);
             this.cbOp.Name = "cbOp";
             this.cbOp.Size = new System.Drawing.Size(121, 21);
             this.cbOp.TabIndex = 4;
@@ -100,7 +104,7 @@
             // 
             // tbValue
             // 
-            this.tbValue.Location = new System.Drawing.Point(2, 155);
+            this.tbValue.Location = new System.Drawing.Point(2, 157);
             this.tbValue.Name = "tbValue";
             this.tbValue.Size = new System.Drawing.Size(100, 20);
             this.tbValue.TabIndex = 5;
@@ -110,7 +114,7 @@
             // 
             this.AddFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddFilter.Location = new System.Drawing.Point(12, 155);
+            this.AddFilter.Location = new System.Drawing.Point(12, 170);
             this.AddFilter.Name = "AddFilter";
             this.AddFilter.Size = new System.Drawing.Size(157, 23);
             this.AddFilter.TabIndex = 6;
@@ -132,9 +136,9 @@
             this.lvFitlers.FullRowSelect = true;
             this.lvFitlers.GridLines = true;
             this.lvFitlers.HideSelection = false;
-            this.lvFitlers.Location = new System.Drawing.Point(12, 37);
+            this.lvFitlers.Location = new System.Drawing.Point(12, 39);
             this.lvFitlers.Name = "lvFitlers";
-            this.lvFitlers.Size = new System.Drawing.Size(457, 112);
+            this.lvFitlers.Size = new System.Drawing.Size(457, 125);
             this.lvFitlers.TabIndex = 1;
             this.lvFitlers.UseCompatibleStateImageBehavior = false;
             this.lvFitlers.View = System.Windows.Forms.View.Details;
@@ -162,7 +166,7 @@
             this.cbMass.Items.AddRange(new object[] {
             "<-",
             "+/-"});
-            this.cbMass.Location = new System.Drawing.Point(232, 128);
+            this.cbMass.Location = new System.Drawing.Point(232, 130);
             this.cbMass.Name = "cbMass";
             this.cbMass.Size = new System.Drawing.Size(121, 21);
             this.cbMass.TabIndex = 7;
@@ -172,7 +176,7 @@
             // 
             this.AddAdjust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddAdjust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddAdjust.Location = new System.Drawing.Point(12, 333);
+            this.AddAdjust.Location = new System.Drawing.Point(12, 348);
             this.AddAdjust.Name = "AddAdjust";
             this.AddAdjust.Size = new System.Drawing.Size(157, 23);
             this.AddAdjust.TabIndex = 10;
@@ -184,7 +188,7 @@
             // 
             this.RemoveAdjust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RemoveAdjust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveAdjust.Location = new System.Drawing.Point(306, 333);
+            this.RemoveAdjust.Location = new System.Drawing.Point(306, 348);
             this.RemoveAdjust.Name = "RemoveAdjust";
             this.RemoveAdjust.Size = new System.Drawing.Size(163, 23);
             this.RemoveAdjust.TabIndex = 9;
@@ -206,9 +210,9 @@
             this.lvAdjust.FullRowSelect = true;
             this.lvAdjust.GridLines = true;
             this.lvAdjust.HideSelection = false;
-            this.lvAdjust.Location = new System.Drawing.Point(12, 201);
+            this.lvAdjust.Location = new System.Drawing.Point(12, 203);
             this.lvAdjust.Name = "lvAdjust";
-            this.lvAdjust.Size = new System.Drawing.Size(457, 126);
+            this.lvAdjust.Size = new System.Drawing.Size(457, 139);
             this.lvAdjust.TabIndex = 8;
             this.lvAdjust.UseCompatibleStateImageBehavior = false;
             this.lvAdjust.View = System.Windows.Forms.View.Details;
@@ -230,11 +234,59 @@
             this.columnHeader6.Text = "Value";
             this.columnHeader6.Width = 101;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Table:";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Location = new System.Drawing.Point(147, 389);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(79, 23);
+            this.btnLoad.TabIndex = 17;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(52, 389);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(79, 23);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnRun
+            // 
+            this.btnRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRun.Location = new System.Drawing.Point(274, 389);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(79, 23);
+            this.btnRun.TabIndex = 18;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
             // FilterAdjustForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 411);
+            this.ClientSize = new System.Drawing.Size(481, 424);
+            this.Controls.Add(this.btnRun);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.AddAdjust);
             this.Controls.Add(this.RemoveAdjust);
             this.Controls.Add(this.lvAdjust);
@@ -250,7 +302,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FilterAdjustForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FilterAdjustForm_FormClosing);
             this.Load += new System.EventHandler(this.FilterAdjustForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -276,5 +327,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnRun;
     }
 }

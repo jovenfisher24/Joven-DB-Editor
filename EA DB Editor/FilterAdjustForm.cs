@@ -15,6 +15,7 @@ namespace EA_DB_Editor
         public List<MaddenTable> lMappedTables = new List<MaddenTable>();
         public List<View> lMappedViews = new List<View>();
         public View view = null;
+        public MaddenTable table = null;
         public List<FieldFilter> lFilters = new List<FieldFilter>();
         public List<FieldFilter> aFilters = new List<FieldFilter>();
         public string text = "";
@@ -44,16 +45,19 @@ namespace EA_DB_Editor
             this.CenterToParent();
             this.Text = text;
         }
-        private void FilterAdjustForm_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void runFilters()
         {
             foreach (ListViewItem lvi in lvFitlers.Items)
             {
-                lFilters.Add(new FieldFilter(lvi.SubItems[0].Text, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
+                Field f = Field.FindField(lMappedFields, lvi.SubItems[0].Text);
+                lFilters.Add(new FieldFilter(f.Abbreviation, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
             }
 
             foreach (ListViewItem lvi in lvAdjust.Items)
             {
-                aFilters.Add(new FieldFilter(lvi.SubItems[0].Text, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
+                Field f = Field.FindField(lMappedFields, lvi.SubItems[0].Text);
+                aFilters.Add(new FieldFilter(f.Abbreviation, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
             }
         }
 
@@ -65,20 +69,32 @@ namespace EA_DB_Editor
             lvAdjust.Items.Clear();
             cbField.Items.Clear();
 
-            if (view.lChildFields.Count > 0)
+            if (view == null)
             {
-                foreach (Field f in view.lChildFields)
-                    cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
-
+                view = new View();
+                table = MaddenTable.FindTable(lMappedTables, cbTable.SelectedItem.ToString());
+                view.Name = table.Abbreviation;
+                view.SourceName = table.Abbreviation;
+                view.SourceType = "Table";
             }
+
             else
             {
-                MaddenTable table = MaddenTable.FindTable(lMappedTables, view.SourceName);
-                if (table == null)
-                    return;
+                table = MaddenTable.FindTable(lMappedTables, view.SourceName);
+                if (view.lChildFields.Count > 0)
+                {
+                    foreach (Field f in view.lChildFields)
+                        cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
 
-                foreach (Field f in table.lFields)
-                    cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
+                }
+                else
+                {
+                    if (table == null)
+                        return;
+
+                    foreach (Field f in table.lFields)
+                        cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
+                }
             }
         }
         private void RemoveFilter_Click(object sender, EventArgs e)
@@ -180,5 +196,18 @@ namespace EA_DB_Editor
                 lvAdjust.Items.RemoveAt(lvAdjust.Items.Count - 1);
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            runFilters();
+
+            SaveFilterForm sf = new SaveFilterForm(lFilters, aFilters, table, SaveFilterForm.SaveAction.Save, "test");
+            sf.ShowDialog();
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            runFilters();
+            this.Close();
+        }
     }
 }

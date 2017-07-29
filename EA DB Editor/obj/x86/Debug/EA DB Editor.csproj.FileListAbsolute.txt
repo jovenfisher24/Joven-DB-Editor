@@ -25,3 +25,4 @@ C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\ob
 C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.Properties.Resources.resources
 C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA DB Editor.csproj.GenerateResource.Cache
 C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.FilterAdjustForm.resources
+C:\Users\Darnell\Documents\Visual Studio 2015\Projects\EA Editor\EA DB Editor\obj\x86\Debug\EA_DB_Editor.SaveFilterForm.resources
