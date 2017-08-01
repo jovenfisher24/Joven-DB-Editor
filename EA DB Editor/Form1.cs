@@ -1241,6 +1241,15 @@ namespace EA_DB_Editor
 
             fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
         }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFilterForm sff = new SaveFilterForm(SaveFilterForm.SaveAction.Load, "Load Saved Criteria");
+            sff.ShowDialog();
+
+            FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters);
+            fa.ShowDialog();
+        }
     }
 
     public class BitStream

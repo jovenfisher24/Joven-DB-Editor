@@ -16,6 +16,8 @@ namespace EA_DB_Editor
         public MaddenTable table = null;
         public string text = "";
         public SaveAction fmAction = SaveAction.Save;
+        public List<SavedCriteria> lSavedCriteria = null;
+        public SavedCriteria savedCriteria = null;
 
         public enum SaveAction
         {
@@ -32,6 +34,49 @@ namespace EA_DB_Editor
             table = mt;
             text = title;
             fmAction = action;
+
+            try
+            {
+                lSavedCriteria = XmlSerialization.ReadFromXmlFile<List<SavedCriteria>>("SavedFilter.txt");
+                foreach (SavedCriteria sc in lSavedCriteria)
+                {
+                    cboSavedName.Items.Add(sc.Name);
+                }
+                cboSavedName.SelectedIndex = 0;
+            }
+            catch
+            {
+                MessageBox.Show("Could not read SavedFilter.txt");
+            }
+        }
+
+        public SaveFilterForm(SaveAction action, string title)
+        {
+            InitializeComponent();
+            
+            text = title;
+            fmAction = action;
+
+            try
+            {
+                lSavedCriteria = XmlSerialization.ReadFromXmlFile<List<SavedCriteria>>("SavedFilter.txt");
+                foreach (SavedCriteria sc in lSavedCriteria)
+                {
+                    cboSavedName.Items.Add(sc.Name);
+                }
+                cboSavedName.SelectedIndex = 0;
+            }
+            catch
+            {
+                MessageBox.Show("Could not read SavedFilter.txt");
+            }
+        }
+
+        private void SaveFilterForm_Load(object sender, EventArgs e)
+        {
+            this.CenterToParent();
+            this.Text = text;
+            
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -39,10 +84,11 @@ namespace EA_DB_Editor
             switch (fmAction)
             {
                 case SaveAction.Save:
-                    SavedCriteria sc = new SavedCriteria("test", "This is a test", table.Abbreviation, listFilters, adjustFilters);
-                    XmlSerialization.WriteToXmlFile<SavedCriteria>("SavedFilter.txt", sc, false);
+                    savedCriteria = new SavedCriteria(cboSavedName.Text, txtDescription.Text, table.Abbreviation, listFilters, adjustFilters);
+                    XmlSerialization.WriteToXmlFile<List<SavedCriteria>>("SavedFilter.txt", new List<SavedCriteria>() { savedCriteria }, false);
                     break;
                 case SaveAction.Load:
+                    savedCriteria = lSavedCriteria[cboSavedName.SelectedIndex];
                     break;
             }
             this.Close();
@@ -59,7 +105,7 @@ namespace EA_DB_Editor
     {
         public string Name = "Untitled";
         public string Description = "";
-        public string table = "";
+        public string Table = "";
         public List<FieldFilter> listFilters = null;
         public List<FieldFilter> adjustFilters = null;
         
@@ -72,7 +118,7 @@ namespace EA_DB_Editor
         {
             Name = sname;
             Description = desc;
-            table = mt;
+            Table = mt;
             listFilters = lsf;
             adjustFilters = adf;
         }

@@ -54,6 +54,7 @@
             this.filterAdjustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterAdjustToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.adjustListsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,6 +240,7 @@
             // 
             this.filterAdjustToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filterAdjustToolStripMenuItem1,
+            this.loadToolStripMenuItem,
             this.adjustListsToolStripMenuItem});
             this.filterAdjustToolStripMenuItem.Name = "filterAdjustToolStripMenuItem";
             this.filterAdjustToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
@@ -248,7 +250,7 @@
             // 
             this.filterAdjustToolStripMenuItem1.Name = "filterAdjustToolStripMenuItem1";
             this.filterAdjustToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.filterAdjustToolStripMenuItem1.Text = "Filter Adjust";
+            this.filterAdjustToolStripMenuItem1.Text = "New";
             this.filterAdjustToolStripMenuItem1.Click += new System.EventHandler(this.filterAdjustToolStripMenuItem1_Click);
             // 
             // adjustListsToolStripMenuItem
@@ -256,6 +258,13 @@
             this.adjustListsToolStripMenuItem.Name = "adjustListsToolStripMenuItem";
             this.adjustListsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.adjustListsToolStripMenuItem.Text = "Adjust Lists...";
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -302,6 +311,7 @@
         private System.Windows.Forms.ToolStripMenuItem filterAdjustToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filterAdjustToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem adjustListsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
     }
 }
 

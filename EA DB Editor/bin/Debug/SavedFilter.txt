@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedCriteria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>test</Name>
-  <Description>This is a test</Description>
-  <listFilters>
-    <FieldFilter>
-      <field>TGID</field>
-      <value>6</value>
-      <op>Equal</op>
-    </FieldFilter>
-  </listFilters>
-  <adjustFilters />
-  <table>TEAM</table>
-</SavedCriteria>
+<ArrayOfSavedCriteria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SavedCriteria>
+    <Name>MyTest</Name>
+    <Description />
+    <Table>TEAM</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>TSWI</field>
+        <value>100</value>
+        <op>GreaterThan</op>
+      </FieldFilter>
+      <FieldFilter>
+        <field>TSTI</field>
+        <value>2</value>
+        <op>GreaterThan</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters>
+      <FieldFilter>
+        <field>TMNA</field>
+        <value>blank</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
+</ArrayOfSavedCriteria>

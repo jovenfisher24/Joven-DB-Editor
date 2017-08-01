@@ -47,7 +47,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -243,22 +242,11 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Table:";
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.Location = new System.Drawing.Point(147, 389);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(79, 23);
-            this.btnLoad.TabIndex = 17;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(52, 389);
+            this.btnSave.Location = new System.Drawing.Point(131, 389);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 23);
             this.btnSave.TabIndex = 16;
@@ -270,7 +258,7 @@
             // 
             this.btnRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRun.Location = new System.Drawing.Point(274, 389);
+            this.btnRun.Location = new System.Drawing.Point(232, 389);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(79, 23);
             this.btnRun.TabIndex = 18;
@@ -284,7 +272,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 424);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddAdjust);
@@ -328,7 +315,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnRun;
     }

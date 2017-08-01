@@ -28,8 +28,6 @@ namespace EA_DB_Editor
             lMappedFields = lMF;
             lMappedTables = lMT;
             lMappedViews = lMV;
-
-            
             text = title;
 
             foreach (View v in lMappedViews)
@@ -40,6 +38,35 @@ namespace EA_DB_Editor
 
             cbTable.SelectedIndex = 0;
         }
+
+        public FilterAdjustForm(List<Field> lMF, List<MaddenTable> lMT, List<View> lMV, string title, string MTabbr, List<FieldFilter> lFltr)
+        {
+            InitializeComponent();
+
+            lMappedFields = lMF;
+            lMappedTables = lMT;
+            lMappedViews = lMV;
+            text = title;
+
+            // TODO: add try..catch
+            View tbview = new View();
+            table = MaddenTable.GetTableByAbbreviation(lMappedTables, MTabbr);
+            tbview.Name = table.Abbreviation;
+            tbview.Type = "Grid";
+            tbview.SourceName = table.Abbreviation;
+            tbview.SourceType = "Table";
+
+            lMappedViews.Insert(0, tbview);
+
+            foreach (View v in lMappedViews)
+            {
+                if (v.Type == "Grid")
+                    cbTable.Items.Add(v.Name);
+            }
+
+            cbTable.SelectedIndex = 0;
+        }
+
         private void FilterAdjustForm_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
@@ -69,33 +96,21 @@ namespace EA_DB_Editor
             lvAdjust.Items.Clear();
             cbField.Items.Clear();
 
-            if (view == null)
+            table = MaddenTable.FindTable(lMappedTables, view.SourceName);
+            if (view.lChildFields.Count > 0)
             {
-                view = new View();
-                table = MaddenTable.FindTable(lMappedTables, cbTable.SelectedItem.ToString());
-                view.Name = table.Abbreviation;
-                view.SourceName = table.Abbreviation;
-                view.SourceType = "Table";
+                foreach (Field f in view.lChildFields)
+                    cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
             }
-
             else
             {
-                table = MaddenTable.FindTable(lMappedTables, view.SourceName);
-                if (view.lChildFields.Count > 0)
-                {
-                    foreach (Field f in view.lChildFields)
-                        cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
+                if (table == null)
+                    return;
 
-                }
-                else
-                {
-                    if (table == null)
-                        return;
-
-                    foreach (Field f in table.lFields)
-                        cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
-                }
+                foreach (Field f in table.lFields)
+                    cbField.Items.Add((f.Name != "") ? f.Name : f.Abbreviation);
             }
+            
         }
         private void RemoveFilter_Click(object sender, EventArgs e)
         {
@@ -200,7 +215,7 @@ namespace EA_DB_Editor
         {
             runFilters();
 
-            SaveFilterForm sf = new SaveFilterForm(lFilters, aFilters, table, SaveFilterForm.SaveAction.Save, "test");
+            SaveFilterForm sf = new SaveFilterForm(lFilters, aFilters, table, SaveFilterForm.SaveAction.Save, "");
             sf.ShowDialog();
         }
 

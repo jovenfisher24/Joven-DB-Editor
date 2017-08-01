@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -43,6 +43,7 @@
             this.cboSavedName.Name = "cboSavedName";
             this.cboSavedName.Size = new System.Drawing.Size(189, 21);
             this.cboSavedName.TabIndex = 0;
+            this.cboSavedName.Text = "Untitled";
             // 
             // label2
             // 
@@ -73,13 +74,13 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // textBox1
+            // txtDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 111);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 43);
-            this.textBox1.TabIndex = 16;
+            this.txtDescription.Location = new System.Drawing.Point(15, 111);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(257, 43);
+            this.txtDescription.TabIndex = 16;
             // 
             // label1
             // 
@@ -96,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label2);
@@ -114,7 +115,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label1;
     }
 }
