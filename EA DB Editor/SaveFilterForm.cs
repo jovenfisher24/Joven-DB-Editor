@@ -84,8 +84,16 @@ namespace EA_DB_Editor
             switch (fmAction)
             {
                 case SaveAction.Save:
-                    savedCriteria = new SavedCriteria(cboSavedName.Text, txtDescription.Text, table.Abbreviation, listFilters, adjustFilters);
-                    XmlSerialization.WriteToXmlFile<List<SavedCriteria>>("SavedFilter.txt", new List<SavedCriteria>() { savedCriteria }, false);
+
+                    if (cboSavedName.Items.Contains(cboSavedName.Text))
+                    {
+                        MessageBox.Show("This Criteria already exists!");
+                    }
+                    else
+                    {
+                        savedCriteria = new SavedCriteria(cboSavedName.Text, txtDescription.Text, table.Abbreviation, listFilters, adjustFilters);
+                        XmlSerialization.WriteToXmlFile<List<SavedCriteria>>("SavedFilter.txt", new List<SavedCriteria>() { savedCriteria }, false);
+                    }
                     break;
                 case SaveAction.Load:
                     savedCriteria = lSavedCriteria[cboSavedName.SelectedIndex];

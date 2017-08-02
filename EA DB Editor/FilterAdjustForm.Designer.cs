@@ -35,7 +35,7 @@
             this.cbOp = new System.Windows.Forms.ComboBox();
             this.tbValue = new System.Windows.Forms.TextBox();
             this.AddFilter = new System.Windows.Forms.Button();
-            this.lvFitlers = new ListViewEx.ListViewEx();
+            this.lvFilters = new ListViewEx.ListViewEx();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -121,28 +121,28 @@
             this.AddFilter.UseVisualStyleBackColor = true;
             this.AddFilter.Click += new System.EventHandler(this.AddFilter_Click);
             // 
-            // lvFitlers
+            // lvFilters
             // 
-            this.lvFitlers.AllowColumnReorder = true;
-            this.lvFitlers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvFilters.AllowColumnReorder = true;
+            this.lvFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvFitlers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvFilters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.lvFitlers.DoubleClickActivation = true;
-            this.lvFitlers.FullRowSelect = true;
-            this.lvFitlers.GridLines = true;
-            this.lvFitlers.HideSelection = false;
-            this.lvFitlers.Location = new System.Drawing.Point(12, 39);
-            this.lvFitlers.Name = "lvFitlers";
-            this.lvFitlers.Size = new System.Drawing.Size(457, 125);
-            this.lvFitlers.TabIndex = 1;
-            this.lvFitlers.UseCompatibleStateImageBehavior = false;
-            this.lvFitlers.View = System.Windows.Forms.View.Details;
-            this.lvFitlers.SubItemClicked += new ListViewEx.SubItemEventHandler(this.lvFitlers_SubItemClicked);
-            this.lvFitlers.SubItemEndEditing += new ListViewEx.SubItemEndEditingEventHandler(this.lvFitlers_SubItemEndEditing);
+            this.lvFilters.DoubleClickActivation = true;
+            this.lvFilters.FullRowSelect = true;
+            this.lvFilters.GridLines = true;
+            this.lvFilters.HideSelection = false;
+            this.lvFilters.Location = new System.Drawing.Point(12, 39);
+            this.lvFilters.Name = "lvFilters";
+            this.lvFilters.Size = new System.Drawing.Size(457, 125);
+            this.lvFilters.TabIndex = 1;
+            this.lvFilters.UseCompatibleStateImageBehavior = false;
+            this.lvFilters.View = System.Windows.Forms.View.Details;
+            this.lvFilters.SubItemClicked += new ListViewEx.SubItemEventHandler(this.lvFilters_SubItemClicked);
+            this.lvFilters.SubItemEndEditing += new ListViewEx.SubItemEndEditingEventHandler(this.lvFilters_SubItemEndEditing);
             // 
             // columnHeader1
             // 
@@ -283,7 +283,7 @@
             this.Controls.Add(this.cbOp);
             this.Controls.Add(this.cbField);
             this.Controls.Add(this.RemoveFilter);
-            this.Controls.Add(this.lvFitlers);
+            this.Controls.Add(this.lvFilters);
             this.Controls.Add(this.cbTable);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -298,7 +298,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbTable;
-        private ListViewEx.ListViewEx lvFitlers;
+        private ListViewEx.ListViewEx lvFilters;
         private System.Windows.Forms.Button RemoveFilter;
         private System.Windows.Forms.ComboBox cbField;
         private System.Windows.Forms.ComboBox cbOp;

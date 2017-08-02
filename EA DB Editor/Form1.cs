@@ -1249,6 +1249,17 @@ namespace EA_DB_Editor
 
             FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters);
             fa.ShowDialog();
+
+            MaddenTable mt = fa.table;
+            fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
+
+            foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+            {
+                foreach (FieldFilter mass in fa.aFilters)
+                    mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+            }
+
+            fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
         }
     }
 
@@ -3318,6 +3329,21 @@ namespace EA_DB_Editor
 		public FieldFilter( string f, string operation, string v )
 		{	Create( f, operation, v );
 		}
+        public string OperationToText ()
+        {
+            string s = this.op.ToString().ToLower();
+            switch ( s )
+            {
+                case "equal": return "=";
+                case "notequal": return "!=";
+                case "greaterthan": return ">";
+                case "lessthan": return "<";
+                case "doesnotcontain": return "!contains";
+                case "set": return "<-";
+                case "adjust": return "+/-";
+                default: return s;
+            }
+        }
 		public void Create( string f, string operation, string v )
 		{
 			field	= f;

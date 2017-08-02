@@ -49,6 +49,7 @@ namespace EA_DB_Editor
             text = title;
 
             // TODO: add try..catch
+            ///TODO: field mapped view from table abbreviation
             View tbview = new View();
             table = MaddenTable.GetTableByAbbreviation(lMappedTables, MTabbr);
             tbview.Name = table.Abbreviation;
@@ -57,7 +58,6 @@ namespace EA_DB_Editor
             tbview.SourceType = "Table";
 
             lMappedViews.Insert(0, tbview);
-
             foreach (View v in lMappedViews)
             {
                 if (v.Type == "Grid")
@@ -65,6 +65,11 @@ namespace EA_DB_Editor
             }
 
             cbTable.SelectedIndex = 0;
+            foreach (FieldFilter ff in lFltr)
+            {
+                ///TODO: find mapped field from Abbreviation
+                BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, ff.field.ToString(), ff.OperationToText(), ff.value.ToString());            
+            }
         }
 
         private void FilterAdjustForm_Load(object sender, EventArgs e)
@@ -75,7 +80,7 @@ namespace EA_DB_Editor
 
         private void runFilters()
         {
-            foreach (ListViewItem lvi in lvFitlers.Items)
+            foreach (ListViewItem lvi in lvFilters.Items)
             {
                 Field f = Field.FindField(lMappedFields, lvi.SubItems[0].Text);
                 lFilters.Add(new FieldFilter(f.Abbreviation, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
@@ -92,7 +97,7 @@ namespace EA_DB_Editor
         {
             view = View.FindView(lMappedViews, cbTable.SelectedItem.ToString());
 
-            lvFitlers.Items.Clear();
+            lvFilters.Items.Clear();
             lvAdjust.Items.Clear();
             cbField.Items.Clear();
 
@@ -114,37 +119,37 @@ namespace EA_DB_Editor
         }
         private void RemoveFilter_Click(object sender, EventArgs e)
         {
-            if (lvFitlers.Items.Count > 0)
-                lvFitlers.Items.RemoveAt(lvFitlers.Items.Count - 1);
+            if (lvFilters.Items.Count > 0)
+                lvFilters.Items.RemoveAt(lvFilters.Items.Count - 1);
         }
         private void AddFilter_Click(object sender, EventArgs e)
         {
             string cb = cbOp.Items[0].ToString();
-            BetterListViewNS.BetterListView.AddToListView(lvFitlers, null, lvFitlers.Items.Count, cbField.Items[0].ToString(), cb, "");
+            BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, cbField.Items[0].ToString(), cb, "");
         }
-        private void lvFitlers_SubItemClicked(object sender, ListViewEx.SubItemEventArgs e)
+        private void lvFilters_SubItemClicked(object sender, ListViewEx.SubItemEventArgs e)
         {
             switch (e.SubItem)
             {
                 case 0:
-                    lvFitlers.StartEditing(cbField, e.Item, e.SubItem);
+                    lvFilters.StartEditing(cbField, e.Item, e.SubItem);
                     break;
                 case 1:
-                    lvFitlers.StartEditing(cbOp, e.Item, e.SubItem);
+                    lvFilters.StartEditing(cbOp, e.Item, e.SubItem);
                     break;
                 case 2:
                     Field f = Field.FindField(lMappedFields, e.Item.SubItems[0].Text);
 
                     if (f.ControlType != "ComboBox")
-                        lvFitlers.StartEditing(tbValue, e.Item, e.SubItem);
+                        lvFilters.StartEditing(tbValue, e.Item, e.SubItem);
                     else
                     {
                         if (e.Item.SubItems[1].Text.Length > 2)
-                            lvFitlers.StartEditing(tbValue, e.Item, e.SubItem);
+                            lvFilters.StartEditing(tbValue, e.Item, e.SubItem);
                         else
                         {
-                            f.EditControl.Parent = lvFitlers;
-                            lvFitlers.StartEditing(f.EditControl, e.Item, e.SubItem);
+                            f.EditControl.Parent = lvFilters;
+                            lvFilters.StartEditing(f.EditControl, e.Item, e.SubItem);
                         }
                     }
                     break;
@@ -166,7 +171,7 @@ namespace EA_DB_Editor
                     break;
             }
         }
-        private void lvFitlers_SubItemEndEditing(object sender, ListViewEx.SubItemEndEditingEventArgs e)
+        private void lvFilters_SubItemEndEditing(object sender, ListViewEx.SubItemEndEditingEventArgs e)
         {
             if (e.SubItem == 2)
             {

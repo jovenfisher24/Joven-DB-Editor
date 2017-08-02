@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSavedCriteria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SavedCriteria>
-    <Name>MyTest</Name>
+    <Name>AnotherTest</Name>
     <Description />
     <Table>TEAM</Table>
     <listFilters>
       <FieldFilter>
-        <field>TSWI</field>
-        <value>100</value>
-        <op>GreaterThan</op>
+        <field>TGID</field>
+        <value>6</value>
+        <op>LessThan</op>
       </FieldFilter>
       <FieldFilter>
-        <field>TSTI</field>
-        <value>2</value>
-        <op>GreaterThan</op>
+        <field>TSLO</field>
+        <value>0</value>
+        <op>NotEqual</op>
       </FieldFilter>
     </listFilters>
-    <adjustFilters>
-      <FieldFilter>
-        <field>TMNA</field>
-        <value>blank</value>
-        <op>Set</op>
-      </FieldFilter>
-    </adjustFilters>
+    <adjustFilters />
   </SavedCriteria>
 </ArrayOfSavedCriteria>
