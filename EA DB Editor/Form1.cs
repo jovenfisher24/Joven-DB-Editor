@@ -1244,22 +1244,29 @@ namespace EA_DB_Editor
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFilterForm sff = new SaveFilterForm(SaveFilterForm.SaveAction.Load, "Load Saved Criteria");
-            sff.ShowDialog();
-
-            FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters);
-            fa.ShowDialog();
-
-            MaddenTable mt = fa.table;
-            fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
-
-            foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+            try
             {
-                foreach (FieldFilter mass in fa.aFilters)
-                    mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
-            }
+                SaveFilterForm sff = new SaveFilterForm(SaveFilterForm.SaveAction.Load, "Load Saved Criteria");
+                sff.ShowDialog();
 
-            fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+                FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters, sff.savedCriteria.adjustFilters);
+                fa.ShowDialog();
+
+                MaddenTable mt = fa.table;
+                fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
+
+                foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+                {
+                    foreach (FieldFilter mass in fa.aFilters)
+                        mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+                }
+
+                fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+            }
+            catch
+            {
+                MessageBox.Show("Could not load Adjustment!");
+            }
         }
     }
 

@@ -69,6 +69,7 @@ namespace EA_DB_Editor
             catch
             {
                 MessageBox.Show("Could not read SavedFilter.txt");
+                this.Close();
             }
         }
 
@@ -85,15 +86,29 @@ namespace EA_DB_Editor
             {
                 case SaveAction.Save:
 
-                    if (cboSavedName.Items.Contains(cboSavedName.Text))
+                    savedCriteria = new SavedCriteria(cboSavedName.Text, txtDescription.Text, table.Abbreviation, listFilters, adjustFilters);
+
+                    if (lSavedCriteria == null)
                     {
-                        MessageBox.Show("This Criteria already exists!");
+                        lSavedCriteria = new List<SavedCriteria>() { savedCriteria };
+                    }
+
+                    else if (cboSavedName.Items.Contains(cboSavedName.Text))
+                    {
+                        DialogResult dialogResult = MessageBox.Show("This Criteria already exists! Do you want to overwrite?", "Save Confirm", MessageBoxButtons.YesNo);
+
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            lSavedCriteria.RemoveAt(cboSavedName.Items.IndexOf(cboSavedName.Text));
+                            lSavedCriteria.Add(savedCriteria);
+                        }
                     }
                     else
                     {
-                        savedCriteria = new SavedCriteria(cboSavedName.Text, txtDescription.Text, table.Abbreviation, listFilters, adjustFilters);
-                        XmlSerialization.WriteToXmlFile<List<SavedCriteria>>("SavedFilter.txt", new List<SavedCriteria>() { savedCriteria }, false);
+                        lSavedCriteria.Add(savedCriteria);
                     }
+
+                    XmlSerialization.WriteToXmlFile<List<SavedCriteria>>("SavedFilter.txt", lSavedCriteria, false);
                     break;
                 case SaveAction.Load:
                     savedCriteria = lSavedCriteria[cboSavedName.SelectedIndex];

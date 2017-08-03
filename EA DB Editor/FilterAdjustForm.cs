@@ -39,7 +39,7 @@ namespace EA_DB_Editor
             cbTable.SelectedIndex = 0;
         }
 
-        public FilterAdjustForm(List<Field> lMF, List<MaddenTable> lMT, List<View> lMV, string title, string MTabbr, List<FieldFilter> lFltr)
+        public FilterAdjustForm(List<Field> lMF, List<MaddenTable> lMT, List<View> lMV, string title, string MTabbr, List<FieldFilter> lFltr, List<FieldFilter> aFltr)
         {
             InitializeComponent();
 
@@ -49,26 +49,41 @@ namespace EA_DB_Editor
             text = title;
 
             // TODO: add try..catch
-            ///TODO: field mapped view from table abbreviation
-            View tbview = new View();
+            
+            
             table = MaddenTable.GetTableByAbbreviation(lMappedTables, MTabbr);
-            tbview.Name = table.Abbreviation;
-            tbview.Type = "Grid";
-            tbview.SourceName = table.Abbreviation;
-            tbview.SourceType = "Table";
+            Console.WriteLine(table.Name);
 
-            lMappedViews.Insert(0, tbview);
+            if (table.Name == table.Abbreviation)
+            {
+                //TODO: Create new view
+                View tbview = new View();
+                tbview.Name = table.Abbreviation;
+                tbview.Type = "Grid";
+                tbview.SourceName = table.Abbreviation;
+                tbview.SourceType = "Table";
+                lMappedViews.Insert(0, tbview);
+            }
+
             foreach (View v in lMappedViews)
             {
                 if (v.Type == "Grid")
                     cbTable.Items.Add(v.Name);
             }
-
-            cbTable.SelectedIndex = 0;
+            
+            cbTable.SelectedIndex = cbTable.Items.IndexOf(table.Name);
             foreach (FieldFilter ff in lFltr)
             {
                 ///TODO: find mapped field from Abbreviation
-                BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, ff.field.ToString(), ff.OperationToText(), ff.value.ToString());            
+                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field.ToString());
+                BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());            
+            }
+
+            foreach (FieldFilter ff in aFltr)
+            {
+                ///TODO: find mapped field from Abbreviation
+                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field.ToString());
+                BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());
             }
         }
 
