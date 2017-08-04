@@ -50,4 +50,23 @@
     </listFilters>
     <adjustFilters />
   </SavedCriteria>
+  <SavedCriteria>
+    <Name>AdjRecTest</Name>
+    <Description />
+    <Table>RCPT</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>RATH</field>
+        <value>1</value>
+        <op>Equal</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters>
+      <FieldFilter>
+        <field>PLNA</field>
+        <value>kobe</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
 </ArrayOfSavedCriteria>

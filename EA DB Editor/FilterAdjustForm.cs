@@ -70,19 +70,30 @@ namespace EA_DB_Editor
                 if (v.Type == "Grid")
                     cbTable.Items.Add(v.Name);
             }
-            
-            cbTable.SelectedIndex = cbTable.Items.IndexOf(table.Name);
+
+            Console.Write(FindViewbyFieldFilter(lFltr));
+            Console.Write(FindViewbyFieldFilter(aFltr));
+
+            if (cbTable.Items.Contains(table.Name))
+            {
+                cbTable.SelectedIndex = cbTable.Items.IndexOf(table.Name);
+            }
+            else if (aFltr.Count == 0 || isFieldFilterinView(aFltr, FindViewbyFieldFilter(lFltr)))
+            {
+                cbTable.SelectedIndex = cbTable.Items.IndexOf(FindViewbyFieldFilter(lFltr));
+            }
+
             foreach (FieldFilter ff in lFltr)
             {
                 ///TODO: find mapped field from Abbreviation
-                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field.ToString());
+                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
                 BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());            
             }
 
             foreach (FieldFilter ff in aFltr)
             {
                 ///TODO: find mapped field from Abbreviation
-                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field.ToString());
+                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
                 BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());
             }
         }
@@ -91,6 +102,39 @@ namespace EA_DB_Editor
         {
             this.CenterToParent();
             this.Text = text;
+        }
+
+        private string FindViewbyFieldFilter (List<FieldFilter> ffilter)
+        {
+            ///for each view with Recruit as source, for each
+            foreach (View v in lMappedViews)
+            {
+                if (v.SourceName == table.Name)
+                {
+                    foreach (FieldFilter ff in ffilter)
+                    {
+                        Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
+                        if (v.lChildFields.Contains(mf))
+                        {
+                            return v.Name;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+        private bool isFieldFilterinView(List<FieldFilter> ffilter, string vm)
+        {
+            View v = View.FindView(lMappedViews, vm);
+            foreach (FieldFilter ff in ffilter)
+            {
+                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
+                if (v.lChildFields.Contains(mf))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void runFilters()
