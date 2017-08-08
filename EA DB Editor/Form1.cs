@@ -1244,8 +1244,8 @@ namespace EA_DB_Editor
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 SaveFilterForm sff = new SaveFilterForm(SaveFilterForm.SaveAction.Load, "Load Saved Criteria");
                 sff.ShowDialog();
 
@@ -1262,11 +1262,11 @@ namespace EA_DB_Editor
                 }
 
                 fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
-            }
-            catch
-            {
-                MessageBox.Show("Could not load Adjustment!");
-            }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Could not load Adjustment!");
+            //}
         }
     }
 

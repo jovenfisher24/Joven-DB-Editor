@@ -52,18 +52,18 @@ namespace EA_DB_Editor
             
             
             table = MaddenTable.GetTableByAbbreviation(lMappedTables, MTabbr);
-            Console.WriteLine(table.Name);
+            string tName = table.Name == "" ? table.Abbreviation : table.Name;
 
-            if (table.Name == table.Abbreviation)
-            {
-                //TODO: Create new view
-                View tbview = new View();
-                tbview.Name = table.Abbreviation;
-                tbview.Type = "Grid";
-                tbview.SourceName = table.Abbreviation;
-                tbview.SourceType = "Table";
-                lMappedViews.Insert(0, tbview);
-            }
+            //if (table.Name == table.Abbreviation)
+            //{
+            //    //TODO: Create new view
+            //    View tbview = new View();
+            //    tbview.Name = table.Abbreviation;
+            //    tbview.Type = "Grid";
+            //    tbview.SourceName = table.Abbreviation;
+            //    tbview.SourceType = "Table";
+            //    lMappedViews.Insert(0, tbview);
+            //}
 
             foreach (View v in lMappedViews)
             {
@@ -71,28 +71,37 @@ namespace EA_DB_Editor
                     cbTable.Items.Add(v.Name);
             }
 
-            Console.Write(FindViewbyFieldFilter(lFltr));
-            Console.Write(FindViewbyFieldFilter(aFltr));
+            //Console.Write(FindViewbyFieldFilter(lFltr));
+            Console.Write(FindViewbyFieldFilter(aFltr, tName));
 
-            if (cbTable.Items.Contains(table.Name))
+            if (cbTable.Items.Contains(tName))
             {
-                cbTable.SelectedIndex = cbTable.Items.IndexOf(table.Name);
+                cbTable.SelectedIndex = cbTable.Items.IndexOf(tName);
             }
-            else if (aFltr.Count == 0 || isFieldFilterinView(aFltr, FindViewbyFieldFilter(lFltr)))
+            else if (lFltr.Count == 0 )
             {
-                cbTable.SelectedIndex = cbTable.Items.IndexOf(FindViewbyFieldFilter(lFltr));
+                cbTable.SelectedIndex = cbTable.Items.IndexOf(FindViewbyFieldFilter(aFltr, tName));
+            }
+            else if (aFltr.Count == 0 || isFieldFilterinView(aFltr, FindViewbyFieldFilter(lFltr, tName)))
+            {
+                cbTable.SelectedIndex = cbTable.Items.IndexOf(FindViewbyFieldFilter(lFltr, tName));
+            }
+            
+            else
+            {
+                MessageBox.Show("Table for this filter does not exist. Please use a different Config file that includes this Table.");
             }
 
             foreach (FieldFilter ff in lFltr)
             {
-                ///TODO: find mapped field from Abbreviation
+                
                 Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
                 BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());            
             }
 
             foreach (FieldFilter ff in aFltr)
             {
-                ///TODO: find mapped field from Abbreviation
+                
                 Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
                 BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());
             }
@@ -104,12 +113,12 @@ namespace EA_DB_Editor
             this.Text = text;
         }
 
-        private string FindViewbyFieldFilter (List<FieldFilter> ffilter)
+        private string FindViewbyFieldFilter (List<FieldFilter> ffilter, string tn)
         {
             ///for each view with Recruit as source, for each
             foreach (View v in lMappedViews)
             {
-                if (v.SourceName == table.Name)
+                if (v.SourceName == tn)
                 {
                     foreach (FieldFilter ff in ffilter)
                     {

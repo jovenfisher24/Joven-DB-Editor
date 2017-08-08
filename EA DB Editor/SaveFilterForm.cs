@@ -66,9 +66,14 @@ namespace EA_DB_Editor
                 }
                 cboSavedName.SelectedIndex = 0;
             }
+            catch (System.IO.FileNotFoundException e)
+            {
+                MessageBox.Show("Did not find file 'SavedFilter.txt'. Saving a Filter will automatically create a new file in the same directory as the editor.");
+            }
+
             catch
             {
-                MessageBox.Show("Could not read SavedFilter.txt");
+                MessageBox.Show("Could not read 'SavedFilter.txt'");
                 this.Close();
             }
         }

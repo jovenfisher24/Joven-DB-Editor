@@ -69,4 +69,17 @@
       </FieldFilter>
     </adjustFilters>
   </SavedCriteria>
+  <SavedCriteria>
+    <Name>CoachTest</Name>
+    <Description />
+    <Table>CONT</Table>
+    <listFilters />
+    <adjustFilters>
+      <FieldFilter>
+        <field>CCYR</field>
+        <value>0</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
 </ArrayOfSavedCriteria>
