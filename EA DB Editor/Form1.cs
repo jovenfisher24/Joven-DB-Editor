@@ -1230,16 +1230,20 @@ namespace EA_DB_Editor
             FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, lMappedTables, new List<View>() { currentView }, "Filter Adjustment");
             fa.ShowDialog();
 
-            MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
-            fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
-
-            foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+            if (fa.DialogResult == DialogResult.OK)
             {
-                foreach (FieldFilter mass in fa.aFilters)
-                    mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
-            }
 
-            fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+                MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
+                fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
+
+                foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+                {
+                    foreach (FieldFilter mass in fa.aFilters)
+                        mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+                }
+
+                fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+            }
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1252,16 +1256,19 @@ namespace EA_DB_Editor
                 FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters, sff.savedCriteria.adjustFilters);
                 fa.ShowDialog();
 
-                MaddenTable mt = fa.table;
-                fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
-
-                foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+                if (fa.DialogResult == DialogResult.OK)
                 {
-                    foreach (FieldFilter mass in fa.aFilters)
-                        mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
-                }
+                    MaddenTable mt = fa.table;
+                    fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
 
-                fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+                    foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+                    {
+                        foreach (FieldFilter mass in fa.aFilters)
+                            mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+                    }
+
+                    fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+                }
             //}
             //catch
             //{

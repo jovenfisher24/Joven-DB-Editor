@@ -71,7 +71,6 @@ namespace EA_DB_Editor
                     cbTable.Items.Add(v.Name);
             }
 
-            //Console.Write(FindViewbyFieldFilter(lFltr));
             Console.Write(FindViewbyFieldFilter(aFltr, tName));
 
             if (cbTable.Items.Contains(tName))
@@ -260,7 +259,6 @@ namespace EA_DB_Editor
             if (e.SubItem == 2)
             {
                 Field f = Field.FindField(lMappedFields, e.Item.SubItems[0].Text);
-
                 if (f.ControlType == "ComboBox" && e.Item.SubItems[1].Text.Length <= 2)
                 {
                     if (f.ControlLink == "")
@@ -270,7 +268,6 @@ namespace EA_DB_Editor
                 }
             }
         }
-
 
         private void AddAdjust_Click(object sender, EventArgs e)
         {
@@ -287,7 +284,6 @@ namespace EA_DB_Editor
         private void btnSave_Click(object sender, EventArgs e)
         {
             runFilters();
-
             SaveFilterForm sf = new SaveFilterForm(lFilters, aFilters, table, SaveFilterForm.SaveAction.Save, "");
             sf.ShowDialog();
         }
@@ -295,6 +291,12 @@ namespace EA_DB_Editor
         private void btnRun_Click(object sender, EventArgs e)
         {
             runFilters();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }
