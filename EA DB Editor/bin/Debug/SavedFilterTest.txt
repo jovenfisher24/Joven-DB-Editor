@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSavedCriteria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SavedCriteria>
+    <Name>MyTest</Name>
+    <Description />
+    <Table>TEAM</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>TGID</field>
+        <value>10</value>
+        <op>LessThan</op>
+      </FieldFilter>
+      <FieldFilter>
+        <field>TSLO</field>
+        <value>2</value>
+        <op>GreaterThan</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters>
+      <FieldFilter>
+        <field>TDNA</field>
+        <value>blank</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
+  <SavedCriteria>
+    <Name>RecTest</Name>
+    <Description />
+    <Table>RCPT</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>RATH</field>
+        <value>1</value>
+        <op>Equal</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters />
+  </SavedCriteria>
+  <SavedCriteria>
+    <Name>ConfTest</Name>
+    <Description />
+    <Table>CCHH</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>SEYR</field>
+        <value>2</value>
+        <op>LessThan</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters />
+  </SavedCriteria>
+  <SavedCriteria>
+    <Name>AdjRecTest</Name>
+    <Description />
+    <Table>RCPT</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>RATH</field>
+        <value>1</value>
+        <op>Equal</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters>
+      <FieldFilter>
+        <field>PLNA</field>
+        <value>kobe</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
+  <SavedCriteria>
+    <Name>CoachTest</Name>
+    <Description />
+    <Table>CONT</Table>
+    <listFilters />
+    <adjustFilters>
+      <FieldFilter>
+        <field>CCYR</field>
+        <value>0</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
+  <SavedCriteria>
+    <Name>CoachTest2</Name>
+    <Description />
+    <Table>CONT</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>TGID</field>
+        <value>3</value>
+        <op>Equal</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters>
+      <FieldFilter>
+        <field>VALU</field>
+        <value>0</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
+</ArrayOfSavedCriteria>

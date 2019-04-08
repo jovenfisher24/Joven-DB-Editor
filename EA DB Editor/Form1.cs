@@ -3336,13 +3336,19 @@ namespace EA_DB_Editor
 		public string		field	= "";
 		public string		value	= "";
 		public Operation	op		= Operation.None;
+        public string       max     = "";
+        public string       min     = "";
 
 		public FieldFilter( )
 		{
 		}
 		public FieldFilter( string f, string operation, string v )
-		{	Create( f, operation, v );
+		{	Create( f, operation, v, "", "" );
 		}
+        public FieldFilter(string f, string operation, string v, string mi, string ma)
+        {
+            Create(f, operation, v, mi, ma);
+        }
         public string OperationToText ()
         {
             string s = this.op.ToString().ToLower();
@@ -3358,10 +3364,12 @@ namespace EA_DB_Editor
                 default: return s;
             }
         }
-		public void Create( string f, string operation, string v )
+		public void Create( string f, string operation, string v, string mi, string ma )
 		{
 			field	= f;
 			value	= v;
+            min     = mi;
+            max     = ma;
 
 			switch( operation.ToLower( ) )
 			{
@@ -3391,7 +3399,7 @@ namespace EA_DB_Editor
 		public bool Process( List<Field> lMF, MaddenRecord mr )
 		{
 			Field	f		= Field.FindField( lMF, field );
-			string	code	= f.Abbreviation != "" ? f.Abbreviation : f.name;
+			string	code	= f.Abbreviation != "" ? f.Abbreviation : f.name; 
 
 			switch( op )
 			{
@@ -3489,10 +3497,39 @@ namespace EA_DB_Editor
 				case Operation.Set:
 					mr[ code ]	= value.ToString( );
 					return true;
-
+                //TODO throw error if field is non-integer
 				case Operation.Adjust:
-					mr[ code ]	= ( Convert.ToInt32( mr[ code ] ) + Convert.ToInt32( value.ToString( ) ) ).ToString( );
-					return true;
+                {
+                    if (string.IsNullOrEmpty(value))
+                    {
+                        value = "0";
+                    }
+
+                    if (string.IsNullOrEmpty(min) && string.IsNullOrEmpty(max))
+                    {
+                        mr[code] = (Convert.ToInt32(mr[code]) + Convert.ToInt32(value.ToString())).ToString();
+                    }
+                    //Cap Value
+                    else if (string.IsNullOrEmpty(min))
+                    {
+                        int tvalue = Math.Min(Convert.ToInt32(mr[code]) + Convert.ToInt32(value.ToString()), Convert.ToInt32(max.ToString()));
+                        mr[code] = tvalue.ToString();
+                    }
+                    //Floor Value
+                    else if (string.IsNullOrEmpty(max))
+                    {
+                        int tvalue = Math.Max(Convert.ToInt32(mr[code]) + Convert.ToInt32(value.ToString()), Convert.ToInt32(min.ToString()));
+                        mr[code] = tvalue.ToString();
+                    }
+                    //Floor/Cap Value
+                    else
+                    {
+                        int tvalue = Math.Min(Convert.ToInt32(mr[code]) + Convert.ToInt32(value.ToString()), Convert.ToInt32(max.ToString()));
+                        tvalue = Math.Max(tvalue, Convert.ToInt32(min.ToString()));
+                        mr[code] = tvalue.ToString();
+                    }
+                    return true;
+                }
 			}
 			return false;
 		}

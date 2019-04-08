@@ -1,83 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSavedCriteria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SavedCriteria>
-    <Name>MyTest</Name>
+    <Name>textName</Name>
     <Description />
     <Table>TEAM</Table>
     <listFilters>
       <FieldFilter>
         <field>TGID</field>
-        <value>10</value>
-        <op>LessThan</op>
-      </FieldFilter>
-      <FieldFilter>
-        <field>TSLO</field>
-        <value>2</value>
-        <op>GreaterThan</op>
+        <value>3</value>
+        <op>Equal</op>
       </FieldFilter>
     </listFilters>
     <adjustFilters>
       <FieldFilter>
         <field>TDNA</field>
-        <value>blank</value>
+        <value>test</value>
         <op>Set</op>
       </FieldFilter>
     </adjustFilters>
   </SavedCriteria>
   <SavedCriteria>
-    <Name>RecTest</Name>
+    <Name>testStadName</Name>
     <Description />
-    <Table>RCPT</Table>
+    <Table>STAD</Table>
     <listFilters>
       <FieldFilter>
-        <field>RATH</field>
-        <value>1</value>
-        <op>Equal</op>
-      </FieldFilter>
-    </listFilters>
-    <adjustFilters />
-  </SavedCriteria>
-  <SavedCriteria>
-    <Name>ConfTest</Name>
-    <Description />
-    <Table>CCHH</Table>
-    <listFilters>
-      <FieldFilter>
-        <field>SEYR</field>
-        <value>2</value>
-        <op>LessThan</op>
-      </FieldFilter>
-    </listFilters>
-    <adjustFilters />
-  </SavedCriteria>
-  <SavedCriteria>
-    <Name>AdjRecTest</Name>
-    <Description />
-    <Table>RCPT</Table>
-    <listFilters>
-      <FieldFilter>
-        <field>RATH</field>
-        <value>1</value>
+        <field>SGID</field>
+        <value>61</value>
         <op>Equal</op>
       </FieldFilter>
     </listFilters>
     <adjustFilters>
       <FieldFilter>
-        <field>PLNA</field>
-        <value>kobe</value>
+        <field>SNAM</field>
+        <value>Test</value>
         <op>Set</op>
       </FieldFilter>
     </adjustFilters>
   </SavedCriteria>
   <SavedCriteria>
-    <Name>CoachTest</Name>
+    <Name>testStadCity</Name>
     <Description />
-    <Table>CONT</Table>
-    <listFilters />
+    <Table>STAD</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>SGID</field>
+        <value>61</value>
+        <op>Equal</op>
+      </FieldFilter>
+    </listFilters>
     <adjustFilters>
       <FieldFilter>
-        <field>CCYR</field>
-        <value>0</value>
+        <field>SCIT</field>
+        <value>Montgomery</value>
+        <op>Set</op>
+      </FieldFilter>
+    </adjustFilters>
+  </SavedCriteria>
+  <SavedCriteria>
+    <Name>testStadYear</Name>
+    <Description />
+    <Table>STAD</Table>
+    <listFilters>
+      <FieldFilter>
+        <field>SGID</field>
+        <value>61</value>
+        <op>Equal</op>
+      </FieldFilter>
+    </listFilters>
+    <adjustFilters>
+      <FieldFilter>
+        <field>SYRO</field>
+        <value>1</value>
         <op>Set</op>
       </FieldFilter>
     </adjustFilters>

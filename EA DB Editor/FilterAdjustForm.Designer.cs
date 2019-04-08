@@ -50,6 +50,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // cbTable
@@ -205,7 +207,9 @@
             this.lvAdjust.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
             this.lvAdjust.DoubleClickActivation = true;
             this.lvAdjust.FullRowSelect = true;
             this.lvAdjust.GridLines = true;
@@ -279,6 +283,14 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Min";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Max";
+            // 
             // FilterAdjustForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,5 +344,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

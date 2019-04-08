@@ -95,14 +95,16 @@ namespace EA_DB_Editor
             {
                 
                 Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
-                BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());            
+                string fName = mf.Name == "" ? mf.Abbreviation : mf.Name;
+                BetterListViewNS.BetterListView.AddToListView(lvFilters, null, lvFilters.Items.Count, fName, ff.OperationToText(), ff.value.ToString());            
             }
 
             foreach (FieldFilter ff in aFltr)
             {
                 
                 Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
-                BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, mf.Name, ff.OperationToText(), ff.value.ToString());
+                string fName = mf.Name == "" ? mf.Abbreviation : mf.Name;
+                BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, fName, ff.OperationToText(), ff.value.ToString());
             }
         }
 
@@ -147,16 +149,20 @@ namespace EA_DB_Editor
 
         private void runFilters()
         {
+            //Clear old items from filter list
+            lFilters.Clear();
             foreach (ListViewItem lvi in lvFilters.Items)
             {
                 Field f = Field.FindField(lMappedFields, lvi.SubItems[0].Text);
                 lFilters.Add(new FieldFilter(f.Abbreviation, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
             }
 
+            //Clear old items from adjust list
+            aFilters.Clear();
             foreach (ListViewItem lvi in lvAdjust.Items)
             {
                 Field f = Field.FindField(lMappedFields, lvi.SubItems[0].Text);
-                aFilters.Add(new FieldFilter(f.Abbreviation, lvi.SubItems[1].Text, lvi.SubItems[2].Text));
+                aFilters.Add(new FieldFilter(f.Abbreviation, lvi.SubItems[1].Text, lvi.SubItems[2].Text, lvi.SubItems[3].Text, lvi.SubItems[4].Text));
             }
         }
 
@@ -234,6 +240,24 @@ namespace EA_DB_Editor
                     break;
                 case 2:
                     Field f = Field.FindField(lMappedFields, e.Item.SubItems[0].Text);
+
+                    if (f.ControlType != "ComboBox")
+                        lvAdjust.StartEditing(tbValue, e.Item, e.SubItem);
+                    else
+                    {
+                        if (e.Item.SubItems[1].Text.Length > 2)
+                            lvAdjust.StartEditing(tbValue, e.Item, e.SubItem);
+                        else
+                        {
+                            f.EditControl.Parent = lvAdjust;
+                            lvAdjust.StartEditing(f.EditControl, e.Item, e.SubItem);
+                        }
+                    }
+                    break;
+               case 3:
+                    lvAdjust.StartEditing(tbValue, e.Item, e.SubItem);
+                    break;
+               case 4:
                     lvAdjust.StartEditing(tbValue, e.Item, e.SubItem);
                     break;
             }
@@ -272,7 +296,7 @@ namespace EA_DB_Editor
         private void AddAdjust_Click(object sender, EventArgs e)
         {
             string cb =  cbMass.Items[0].ToString();
-            BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, cbField.Items[0].ToString(), cb, "");
+            BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, cbField.Items[0].ToString(), cb, "", "", "");
         }
 
         private void RemoveAdjust_Click(object sender, EventArgs e)
