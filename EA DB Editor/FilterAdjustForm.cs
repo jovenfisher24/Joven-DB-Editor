@@ -19,6 +19,7 @@ namespace EA_DB_Editor
         public List<FieldFilter> lFilters = new List<FieldFilter>();
         public List<FieldFilter> aFilters = new List<FieldFilter>();
         public string text = "";
+        public bool isViewInConfig = true;
 
 
         public FilterAdjustForm(List<Field> lMF, List<MaddenTable> lMT, List<View> lMV, string title)
@@ -54,17 +55,6 @@ namespace EA_DB_Editor
             table = MaddenTable.GetTableByAbbreviation(lMappedTables, MTabbr);
             string tName = table.Name == "" ? table.Abbreviation : table.Name;
 
-            //if (table.Name == table.Abbreviation)
-            //{
-            //    //TODO: Create new view
-            //    View tbview = new View();
-            //    tbview.Name = table.Abbreviation;
-            //    tbview.Type = "Grid";
-            //    tbview.SourceName = table.Abbreviation;
-            //    tbview.SourceType = "Table";
-            //    lMappedViews.Insert(0, tbview);
-            //}
-
             foreach (View v in lMappedViews)
             {
                 if (v.Type == "Grid")
@@ -88,7 +78,26 @@ namespace EA_DB_Editor
             
             else
             {
-                MessageBox.Show("Table for this filter does not exist. Please use a different Config file that includes this Table.");
+                //if (table.Name == table.Abbreviation)
+                //{
+                //TODO: Create new view
+                isViewInConfig = false;
+                View tbview = new View();
+                tbview.Name = table.Abbreviation;
+                tbview.Type = "Grid";
+                tbview.SourceName = table.Abbreviation;
+                tbview.SourceType = "Table";
+                List<string> cf = new List<string>();
+                foreach (Field f in table.lFields)
+                {
+                    cf.Add(f.name);
+                }
+                tbview.ChildFields = cf;
+                lMappedViews.Insert(0, tbview);
+                cbTable.Items.Add(tbview.Name);
+                cbTable.SelectedIndex = cbTable.Items.IndexOf(tbview.Name);
+                //}
+                MessageBox.Show("The Table for this filter is not mapped in this config. You will not be able to view the changes.");
             }
 
             foreach (FieldFilter ff in lFltr)
@@ -104,7 +113,7 @@ namespace EA_DB_Editor
                 
                 Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
                 string fName = mf.Name == "" ? mf.Abbreviation : mf.Name;
-                BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, fName, ff.OperationToText(), ff.value.ToString());
+                BetterListViewNS.BetterListView.AddToListView(lvAdjust, null, lvAdjust.Items.Count, fName, ff.OperationToText(), ff.value.ToString(), ff.min.ToString(), ff.max.ToString());
             }
         }
 
@@ -116,7 +125,7 @@ namespace EA_DB_Editor
 
         private string FindViewbyFieldFilter (List<FieldFilter> ffilter, string tn)
         {
-            ///for each view with Recruit as source, for each
+            ///for each view with tablename as source, for each
             foreach (View v in lMappedViews)
             {
                 if (v.SourceName == tn)
@@ -131,17 +140,21 @@ namespace EA_DB_Editor
                     }
                 }
             }
-            return null;
+            return tn;
         }
         private bool isFieldFilterinView(List<FieldFilter> ffilter, string vm)
         {
             View v = View.FindView(lMappedViews, vm);
-            foreach (FieldFilter ff in ffilter)
+
+            if (v != null)
             {
-                Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
-                if (v.lChildFields.Contains(mf))
+                foreach (FieldFilter ff in ffilter)
                 {
-                    return true;
+                    Field mf = Field.GetFieldByAbbreviation(lMappedFields, ff.field);
+                    if (v.lChildFields.Contains(mf))
+                    {
+                        return true;
+                    }
                 }
             }
             return false;

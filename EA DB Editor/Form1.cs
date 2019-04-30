@@ -621,7 +621,81 @@ namespace EA_DB_Editor
 			MaddenTable	mt	= MaddenTable.FindTable( lMappedTables, ff.view.SourceName );
 			ff.view.RefreshGridData( maddenDB[ mt.Abbreviation ] );
 		}
-		private void headerToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void filterAdjustToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, lMappedTables, new List<View>() { currentView }, "Filter Adjustment");
+            fa.ShowDialog();
+
+            if (fa.DialogResult == DialogResult.OK)
+            {
+                if (fa.isViewInConfig)
+                {
+                    MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
+                    fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
+
+                    foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+                    {
+                        foreach (FieldFilter mass in fa.aFilters)
+                            mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+                    }
+
+                    fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+                }
+            }
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            SaveFilterForm sff = new SaveFilterForm(SaveFilterForm.SaveAction.Load, "Load Saved Criteria");
+            sff.ShowDialog();
+
+            FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters, sff.savedCriteria.adjustFilters);
+            fa.ShowDialog();
+
+            if (fa.DialogResult == DialogResult.OK)
+            {
+                if (fa.isViewInConfig)
+                {
+                    MaddenTable mt = fa.table;
+                    fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
+
+                    foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
+                    {
+                        foreach (FieldFilter mass in fa.aFilters)
+                            mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
+                    }
+
+                    fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
+                }
+                else
+                {
+                    MaddenTable mt = fa.table;
+                    List<MaddenRecord> lmr = new List<MaddenRecord>();
+                    for (int i = 0; i < mt.lRecords.Count; i++)
+                    {
+                        if (!FieldFilter.ProcessFilters(fa.lFilters, mt.lFields, mt.lRecords[i]))
+                            continue;
+                        lmr.Add(mt.lRecords[i]);
+                    }
+
+                    foreach (MaddenRecord m in lmr)
+                    {
+                        foreach (FieldFilter mass in fa.aFilters)
+                            mass.Process(mt.lFields, m);
+                    }
+                    MessageBox.Show("Adjustment made to table that is not mapped in this config!");
+                } 
+            }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Could not load Adjustment!");
+            //}
+        }
+        private void headerToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			List<object>	lo1	= new List<object>( );
 			List<object>	lo2	= new List<object>( );
@@ -1225,56 +1299,7 @@ namespace EA_DB_Editor
 			Cursor.Current	= Cursors.Default;
 		}
 
-        private void filterAdjustToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, lMappedTables, new List<View>() { currentView }, "Filter Adjustment");
-            fa.ShowDialog();
 
-            if (fa.DialogResult == DialogResult.OK)
-            {
-
-                MaddenTable mt = MaddenTable.FindTable(lMappedTables, fa.view.SourceName);
-                fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
-
-                foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
-                {
-                    foreach (FieldFilter mass in fa.aFilters)
-                        mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
-                }
-
-                fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
-            }
-        }
-
-        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-                SaveFilterForm sff = new SaveFilterForm(SaveFilterForm.SaveAction.Load, "Load Saved Criteria");
-                sff.ShowDialog();
-
-                FilterAdjustForm fa = new FilterAdjustForm(lMappedFields, maddenDB.lTables, lMappedViews, sff.savedCriteria.Name, sff.savedCriteria.Table, sff.savedCriteria.listFilters, sff.savedCriteria.adjustFilters);
-                fa.ShowDialog();
-
-                if (fa.DialogResult == DialogResult.OK)
-                {
-                    MaddenTable mt = fa.table;
-                    fa.view.UpdateGridData(maddenDB[mt.Abbreviation], fa.lFilters);
-
-                    foreach (ListViewItem lvi in ((ListView)fa.view.DisplayControl).Items)
-                    {
-                        foreach (FieldFilter mass in fa.aFilters)
-                            mass.Process(lMappedFields, ((MaddenRecord)lvi.Tag));
-                    }
-
-                    fa.view.RefreshGridData(maddenDB[mt.Abbreviation]);
-                }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Could not load Adjustment!");
-            //}
-        }
     }
 
     public class BitStream
@@ -3521,7 +3546,7 @@ namespace EA_DB_Editor
                         int tvalue = Math.Max(Convert.ToInt32(mr[code]) + Convert.ToInt32(value.ToString()), Convert.ToInt32(min.ToString()));
                         mr[code] = tvalue.ToString();
                     }
-                    //Floor/Cap Value
+                    //Floor and Cap Value
                     else
                     {
                         int tvalue = Math.Min(Convert.ToInt32(mr[code]) + Convert.ToInt32(value.ToString()), Convert.ToInt32(max.ToString()));
